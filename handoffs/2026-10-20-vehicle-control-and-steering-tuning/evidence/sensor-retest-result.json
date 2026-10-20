@@ -1,0 +1,59 @@
+{
+  "firmwareTested": "STEER_SENSOR_TEST_V1",
+  "adcBits": 12,
+  "operatorReportsDividerFitted": true,
+  "operatorConfirmedA0Pin14": true,
+  "operatorConfirmedInitialWheelMovementAndSensorShaftRotation": true,
+  "stationarySamples": [
+    {
+      "position": "initial_center",
+      "steps": 0,
+      "medianAdc": 2500,
+      "min": 2493,
+      "max": 2504,
+      "log": "sensor-test-20261020-045414Z.json"
+    },
+    {
+      "position": "right_boundary",
+      "steps": 10000,
+      "medianAdc": 2500,
+      "min": 2497,
+      "max": 2503,
+      "log": "sensor-test-20261020-045603Z.json"
+    },
+    {
+      "position": "center",
+      "steps": 0,
+      "medianAdc": 2500,
+      "min": 2495,
+      "max": 2504,
+      "log": "sensor-test-20261020-045631Z.json"
+    },
+    {
+      "position": "left_boundary",
+      "steps": -8250,
+      "medianAdc": 2500,
+      "min": 2498,
+      "max": 2504,
+      "log": "sensor-test-20261020-045645Z.json"
+    },
+    {
+      "position": "final_center",
+      "steps": 0,
+      "medianAdc": 2500,
+      "min": 2496,
+      "max": 2503,
+      "log": "sensor-test-20261020-045731Z.json"
+    }
+  ],
+  "angleFeedbackValidated": false,
+  "newAnalogProfileSaved": false,
+  "eepromWrites": false,
+  "allStepCommandsCompleted": true,
+  "anySwitchTriggered": false,
+  "finalStoppedAndDisarmed": true,
+  "furtherCalibrationDeferredByOperator": true,
+  "operationalFirmwareRestored": "STEER_LIMITS_20261019_R01",
+  "operationalVerificationLog": "stationary-20261020-050116Z.log",
+  "masterTestRun": false
+}

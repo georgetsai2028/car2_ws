@@ -1,0 +1,37 @@
+{
+  "source": "Operator observations in chat",
+  "steeringUsbSerial": "20369970",
+  "motorStepPin": 15,
+  "motorDirPin": 16,
+  "directionInverted": true,
+  "positiveStepsTurnWheels": "right",
+  "physicallyRightSwitchPin": 17,
+  "physicallyLeftSwitchPin": 18,
+  "rightwardTravelApproachesSwitchPin": 18,
+  "leftwardTravelStopPinAssignedButNotYetReached": 17,
+  "observations": [
+    {
+      "log": "limit-test-20261020-041310Z.json",
+      "steps": 500,
+      "firmware": "V1",
+      "operator": "No visible movement"
+    },
+    {
+      "log": "limit-test-20261020-041349Z.json",
+      "steps": 1000,
+      "firmware": "V1",
+      "operator": "No wheel movement; motor noise/vibration"
+    },
+    {
+      "log": "limit-test-20261020-041803Z.json",
+      "steps": 5000,
+      "firmware": "V2",
+      "operator": "Turned right almost fully to physically left switch; slightly more travel needed",
+      "limitReached": false
+    }
+  ],
+  "actualCenterMeasured": false,
+  "endpointsMeasured": false,
+  "degreesPerStepKnown": false,
+  "absoluteSensorConditioningVerified": false
+}

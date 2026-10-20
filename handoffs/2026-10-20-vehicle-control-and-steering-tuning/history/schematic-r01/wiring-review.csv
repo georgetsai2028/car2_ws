@@ -1,0 +1,28 @@
+﻿Subsystem,From,To,Type,Evidence,Review note
+All four,22 / CAN1 TX,CAN module TXD / D,Teensy -> transceiver,U/R,250 kbit/s; same on all roles
+All four,23 / CAN1 RX,CAN module RXD / R,transceiver -> Teensy,U/R,Do not swap TXD and RXD
+All four,3.3 V,CAN module VCC,power,U,Exact module chip/model Q01
+All four,GND,CAN module GND,return,U,Cross-node reference continuity Q03
+CAN trunk,Acceleration -> master -> steering -> brake,CAN-H to CAN-H; CAN-L to CAN-L,bidirectional,U,Physical cable order; check polarity
+CAN termination,Acceleration end,120 ohms H-L,passive,TARGET,Q02; count module resistor/jumper
+CAN termination,Brake module end,120 ohms H-L,passive,TARGET,Remains endpoint while CAN cable connected
+Master,USB,PC USB serial 115200,bidirectional,U/R,VIN-VUSB isolation Q03
+Throttle,18 / SDA,MCP4725 SDA,I2C,R,0x62 fallback0x60
+Throttle,19 / SCL,MCP4725 SCL,I2C,R,MCP4725 VCC and ground Q08
+Throttle,MCP4725 OUT,Votol throttle input,analog,R/?,Idle0.80V; max3.30V intended; terminal Q08
+Throttle,33 / GEAR_B,Controller mode input B,digital,R/?,Actual controller terminal Q08
+Throttle,34 / GEAR_C,Controller mode input C,digital,R/?,Actual controller terminal Q08
+Throttle,35 / GEAR_D,Controller mode input D,digital,R/?,Actual controller terminal Q08
+Throttle,2 / ENC_A; 3 / ENC_B,LPD3806 encoder A/B,input,R/?,"Supply, levels and conditioning Q10"
+Steering,15 / STEP,CL57T pulse input pair,output,R/U/?,PUL+/- interface and polarity Q05
+Steering,16 / DIR,CL57T direction input pair,output,R/U/?,DIR+/- interface and polarity Q05
+Steering,17 / LIMIT_A,NC contact to logic GND,input,R/U,Firmware LEFT; manually activated right-side contact; travel Q06
+Steering,18 / LIMIT_B,NC contact to logic GND,input,R/U,Firmware RIGHT; manually activated left-side contact; travel Q06
+Steering,A0 /14,Steering position feedback,analog input,R/U/?,Failed sensor identity and supply Q10
+Steering,20 / ENA,Unused by current operational code,disabled,R,Physical ENA wiring unknown Q05
+Brake,18 / APPLY,IBT-2 apply direction PWM input,PWM20kHz,R/?,RPWM/LPWM mapping Q07
+Brake,19 / RELEASE,IBT-2 release direction PWM input,PWM20kHz,R/?,RPWM/LPWM mapping Q07
+Brake,A0 /14,Actuator feedback potentiometer wiper,analog input,R/?,Excitation/scaling/wire colors Q07
+Power,48V source,Buck input,power,U,Source and fuse/disconnect topology Q09
+Power,Buck output(s),Teensy VIN / actuator rails,power,?,Do not assume common output voltage; Q03/Q04
+Other,Master GPIO2-5,Underglow control interface,digital,R/?,README mention only; interface not implemented in active master source

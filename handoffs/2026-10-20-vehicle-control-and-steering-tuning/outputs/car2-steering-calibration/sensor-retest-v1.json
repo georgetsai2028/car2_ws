@@ -1,0 +1,29 @@
+{
+  "marker": "STEER_SENSOR_TEST_V1",
+  "file": "steer-sensor-test-v1.hex",
+  "sha256": "f7ae2a32d04af728e64a8cf594d28eac031bead05a30fac433a5f6b6682d6d7d",
+  "usbSerial": "20369970",
+  "adcPin": "A0",
+  "adcBits": 12,
+  "sensorPath": "Operator reports analog divider fitted; values unspecified",
+  "softLimitsFromConfirmedStraight": [
+    -8250,
+    10000
+  ],
+  "rightwardTravelStopPin": 18,
+  "leftwardTravelStopPin": 17,
+  "pulseHighMicroseconds": 100,
+  "maximumBurstPulses": 5000,
+  "moveTimeoutMilliseconds": 2500,
+  "keepaliveTimeoutMilliseconds": 250,
+  "statusPeriodMilliseconds": 20,
+  "explicitCenterRequiredBeforeMotion": true,
+  "adcUsedForPositionControl": false,
+  "adcRailStopsMotion": true,
+  "eepromWrites": false,
+  "normalCanControl": false,
+  "hostCppRegressionsPassed": 12,
+  "platformioBuildPassed": true,
+  "uploaded": true,
+  "currentlyInstalled": false
+}

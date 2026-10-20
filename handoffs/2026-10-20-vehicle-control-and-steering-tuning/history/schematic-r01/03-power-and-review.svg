@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190.55pt" height="841.89pt" viewBox="0 0 1190.55 841.89">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect x="36" y="28" width="7" height="47" rx="0" stroke="#00817D" fill="#00817D"/>
+<text x="55.00" y="48.00" font-size="22" fill="#163047" font-weight="bold" text-anchor="start">Car2 / Power distribution and review checklist</text>
+<text x="55.00" y="70.00" font-size="10.5" fill="#697786" font-weight="normal" text-anchor="start">Power topology is incomplete. Solid reported paths and dashed unverified paths are intentionally distinguished.</text>
+<text x="1154.55" y="45.00" font-size="10" fill="#A76000" font-weight="bold" text-anchor="end">DRAFT r01 / REVIEW</text>
+<polyline points="36.00,86.00 1154.55,86.00" fill="none" stroke="#CDD7E0" stroke-width="1"/>
+<text x="36.00" y="108.00" font-size="9" fill="#00817D" font-weight="bold" text-anchor="start">[U] user report or live observation</text>
+<text x="277.00" y="108.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="start">[R] repository / intended wiring</text>
+<text x="526.00" y="108.00" font-size="9" fill="#A76000" font-weight="bold" text-anchor="start">[?] needs confirmation</text>
+<text x="1154.55" y="108.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="end">Dashed amber = unverified detail</text>
+<rect x="36" y="133" width="1118" height="274" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="50.00" y="156.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">LOGIC POWER / SOURCE AND DISTRIBUTION TO VERIFY [Q03]</text>
+<rect x="53" y="186" width="162" height="78" rx="4" stroke="#00817D" fill="white"/>
+<text x="134.00" y="210.00" font-size="12" fill="#00817D" font-weight="bold" text-anchor="middle">48 V source [U]</text>
+<text x="134.00" y="231.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">Pack / fuse / disconnect</text>
+<text x="134.00" y="248.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">details unknown [Q09]</text>
+<rect x="274" y="186" width="180" height="78" rx="4" stroke="#00817D" fill="white"/>
+<text x="364.00" y="210.00" font-size="12" fill="#00817D" font-weight="bold" text-anchor="middle">DC/DC buck [U]</text>
+<text x="364.00" y="231.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="middle">Output setting / rating ?</text>
+<text x="364.00" y="248.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="middle">Isolated or common return ?</text>
+<polyline points="215.00,211.00 274.00,211.00" fill="none" stroke="#B64545" stroke-width="2"/>
+<polyline points="268.68,213.77 274.00,211.00 268.68,208.23" fill="none" stroke="#B64545" stroke-width="2"/>
+<polyline points="215.00,246.00 274.00,246.00" fill="none" stroke="#697786" stroke-width="1.5"/>
+<text x="244.00" y="203.00" font-size="8" fill="#B64545" font-weight="normal" text-anchor="middle">+48 V</text>
+<text x="244.00" y="260.00" font-size="7.5" fill="#697786" font-weight="normal" text-anchor="middle">RETURN</text>
+<rect x="712" y="186" width="200" height="78" rx="4" stroke="#A76000" fill="#FFF9ED" stroke-dasharray="5 3"/>
+<text x="812.00" y="209.00" font-size="11" fill="#A76000" font-weight="bold" text-anchor="middle">LOGIC VIN distribution [?]</text>
+<text x="812.00" y="230.00" font-size="9" fill="#315BA3" font-weight="normal" text-anchor="middle">5 V nominal expected [R]</text>
+<text x="812.00" y="248.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="middle">Actual buck rail / wiring: Q03</text>
+<polyline points="454.00,211.00 712.00,211.00" fill="none" stroke="#A76000" stroke-width="1.7" stroke-dasharray="5 3"/>
+<polyline points="706.68,213.77 712.00,211.00 706.68,208.23" fill="none" stroke="#A76000" stroke-width="1.7"/>
+<polyline points="454.00,246.00 712.00,246.00" fill="none" stroke="#697786" stroke-width="1.4" stroke-dasharray="5 3"/>
+<text x="583.00" y="202.00" font-size="8.5" fill="#A76000" font-weight="bold" text-anchor="middle">OUTPUT VOLTAGE / WIRING [?]</text>
+<rect x="712" y="309" width="200" height="77" rx="4" stroke="#315BA3" fill="white"/>
+<text x="812.00" y="332.00" font-size="11" fill="#163047" font-weight="bold" text-anchor="middle">4 x Teensy 4.1 [R/U]</text>
+<text x="812.00" y="351.00" font-size="9" fill="#315BA3" font-weight="normal" text-anchor="middle">VIN -&gt; onboard 3.3 V regulator</text>
+<text x="812.00" y="370.00" font-size="8.5" fill="#00817D" font-weight="normal" text-anchor="middle">Each board powers its CAN module</text>
+<polyline points="786.00,264.00 786.00,309.00" fill="none" stroke="#A76000" stroke-width="1.5" stroke-dasharray="5 3"/>
+<polyline points="783.23,303.68 786.00,309.00 788.77,303.68" fill="none" stroke="#A76000" stroke-width="1.5"/>
+<text x="777.00" y="291.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="end">VIN [?]</text>
+<polyline points="837.00,264.00 837.00,309.00" fill="none" stroke="#697786" stroke-width="1.3" stroke-dasharray="5 3"/>
+<rect x="979" y="309" width="157" height="77" rx="4" stroke="#00817D" fill="white"/>
+<text x="1057.50" y="331.00" font-size="10" fill="#00817D" font-weight="bold" text-anchor="middle">4 x CAN modules [U]</text>
+<text x="1057.50" y="352.00" font-size="9" fill="#00817D" font-weight="normal" text-anchor="middle">VCC = Teensy 3.3 V</text>
+<text x="1057.50" y="373.00" font-size="9" fill="#697786" font-weight="normal" text-anchor="middle">GND = Teensy GND</text>
+<polyline points="912.00,348.00 979.00,348.00" fill="none" stroke="#B64545" stroke-width="1.7"/>
+<polyline points="973.68,350.77 979.00,348.00 973.68,345.23" fill="none" stroke="#B64545" stroke-width="1.7"/>
+<text x="945.00" y="340.00" font-size="8" fill="#B64545" font-weight="normal" text-anchor="middle">3.3 V</text>
+<polyline points="912.00,371.00 979.00,371.00" fill="none" stroke="#697786" stroke-width="1.4"/>
+<rect x="980" y="186" width="156" height="78" rx="4" stroke="#315BA3" fill="white"/>
+<text x="1058.00" y="210.00" font-size="11" fill="#315BA3" font-weight="bold" text-anchor="middle">PC / USB [U]</text>
+<text x="1058.00" y="231.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="middle">VIN-VUSB link state ?</text>
+<text x="1058.00" y="248.00" font-size="9" fill="#697786" font-weight="normal" text-anchor="middle">See inset below</text>
+<polyline points="1058.00,264.00 1058.00,285.00 881.00,285.00 881.00,309.00" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<polyline points="878.23,303.68 881.00,309.00 883.77,303.68" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<text x="53.00" y="300.00" font-size="10" fill="#163047" font-weight="normal" text-anchor="start">The reported vehicle-supply path is 48 V -&gt; buck input. Buck output, branching, current ratings, return bonding and actuator supplies</text>
+<text x="53.00" y="316.00" font-size="10" fill="#163047" font-weight="normal" text-anchor="start">have not been traced. No direct 48 V -&gt; Teensy connection is intended.</text>
+<rect x="36" y="430" width="544" height="140" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="50.00" y="453.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">USB / VIN connection detail [R] - inspect actual isolation [Q03]</text>
+<text x="54.00" y="480.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="start">USB 5 V / VUSB</text>
+<polyline points="157.00,477.00 242.00,477.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<circle cx="242" cy="477" r="2" fill="#315BA3" stroke="#315BA3"/>
+<polyline points="242.00,477.00 283.00,477.00" fill="none" stroke="#A76000" stroke-width="2" stroke-dasharray="5 3"/>
+<circle cx="283" cy="477" r="2" fill="#A76000" stroke="#A76000"/>
+<polyline points="283.00,477.00 376.00,477.00" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<text x="392.00" y="480.00" font-size="9" fill="#B64545" font-weight="bold" text-anchor="start">VIN / board power</text>
+<polyline points="355.00,468.00 355.00,477.00" fill="none" stroke="#A76000" stroke-width="1.3" stroke-dasharray="5 3"/>
+<circle cx="355" cy="477" r="2.6" fill="#B64545" stroke="#B64545"/>
+<text x="355.00" y="466.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="middle">External 5 V ?</text>
+<text x="263.00" y="498.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">Factory link: connected or cut? [?]</text>
+<text x="52.00" y="523.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">PJRC: VIN and VUSB are normally linked. USB plus external VIN requires appropriate isolation of that power connection.</text>
+<text x="52.00" y="535.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">Inspect the installed boards; keep USB data and signal ground correctly connected.</text>
+<rect x="610" y="430" width="544" height="140" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="624.00" y="453.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">ACTUATOR SUPPLIES / NO UNVERIFIED POWER JUMPERS DRAWN</text>
+<text x="626.00" y="473.00" font-size="9.5" fill="#163047" font-weight="normal" text-anchor="start">Votol EM70: traction supply, fuse, enable and motor phases [?].</text>
+<text x="626.00" y="490.00" font-size="9.5" fill="#163047" font-weight="normal" text-anchor="start">CL57T: actual supply voltage, polarity and driver version [?].</text>
+<text x="626.00" y="507.00" font-size="9.5" fill="#163047" font-weight="normal" text-anchor="start">IBT-2 brake: repository specifies a fused 12 V motor supply [R]; source and fuse rating [?]. Logic VCC and enable wiring</text>
+<text x="626.00" y="524.00" font-size="9.5" fill="#163047" font-weight="normal" text-anchor="start">[?].</text>
+<rect x="36" y="591" width="1118" height="178" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="50.00" y="614.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">CORRECTIONS TO REQUEST - reply using Q01 ... Q10</text>
+<text x="52.00" y="638.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q01</text>
+<text x="91.00" y="638.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">CAN module chip/model; actual H/L screw-terminal labels and wire polarity.</text>
+<text x="52.00" y="663.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q02</text>
+<text x="91.00" y="663.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">Which termination jumpers/resistors are fitted? Confirm 60 ohms powered off.</text>
+<text x="52.00" y="688.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q03</text>
+<text x="91.00" y="688.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">Buck output(s), VIN wiring, ground bonding and each VIN-VUSB link state.</text>
+<text x="52.00" y="713.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q04</text>
+<text x="91.00" y="713.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">Driver/controller model labels and all motor-supply voltages/fuse ratings.</text>
+<text x="52.00" y="738.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q05</text>
+<text x="91.00" y="738.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">CL57T PUL+/PUL-, DIR+/DIR-, ENA connections and any interface circuit.</text>
+<text x="610.00" y="638.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q06</text>
+<text x="649.00" y="638.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">Which pin17/pin18 switch is physically reached on left and right travel?</text>
+<text x="610.00" y="663.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q07</text>
+<text x="649.00" y="663.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">IBT-2 PWM/enable/VCC terminals; actuator motor pair and feedback wiring.</text>
+<text x="610.00" y="688.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q08</text>
+<text x="649.00" y="688.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">MCP4725 supply; Votol throttle ground/input and GPIO33/34/35 terminals.</text>
+<text x="610.00" y="713.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q09</text>
+<text x="649.00" y="713.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">Physical E-stop/disconnect/contactor chain; underglow supply and switching.</text>
+<text x="610.00" y="738.00" font-size="9.5" fill="#A76000" font-weight="bold" text-anchor="start">Q10</text>
+<text x="649.00" y="738.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">Which steering sensor failed? Motor encoder vs A0 feedback; encoder supplies.</text>
+<polyline points="36.00,787.00 1154.55,787.00" fill="none" stroke="#CDD7E0" stroke-width="1"/>
+<text x="36.00" y="804.00" font-size="8" fill="#697786" font-weight="normal" text-anchor="start">Basis: calebhylkema/car2_ws pin map + current session reports/tests. Reference repo does not override these pins.</text>
+<text x="36.00" y="819.00" font-size="8" fill="#697786" font-weight="normal" text-anchor="start">Review draft: [?] details are incomplete. Diagram colors do not specify vehicle wire colors. Junction dots indicate connections.</text>
+<text x="1154.55" y="819.00" font-size="8" fill="#163047" font-weight="bold" text-anchor="end">CAR2 / r01 / SHEET 3 OF 3</text>
+</svg>

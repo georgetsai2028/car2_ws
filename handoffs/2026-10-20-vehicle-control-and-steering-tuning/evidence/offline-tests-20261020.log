@@ -1,0 +1,70 @@
+test_active_steering_remains_controllable (test_teleop_safety.TeleopSafety.test_active_steering_remains_controllable) ... ok
+test_clear_estop_does_not_enable_drive (test_teleop_safety.TeleopSafety.test_clear_estop_does_not_enable_drive) ... ok
+test_disabled_manual_reference_explains_reference_inhibit (test_teleop_safety.TeleopSafety.test_disabled_manual_reference_explains_reference_inhibit) ... ok
+test_estop_cannot_clear_with_missing_can_or_reference (test_teleop_safety.TeleopSafety.test_estop_cannot_clear_with_missing_can_or_reference) ... ok
+test_estop_suppresses_held_steering_and_explicit_trim (test_teleop_safety.TeleopSafety.test_estop_suppresses_held_steering_and_explicit_trim) ... ok
+test_fault_blocks_enable (test_teleop_safety.TeleopSafety.test_fault_blocks_enable) ... ok
+test_frozen_master_telemetry_cannot_keep_driving (test_teleop_safety.TeleopSafety.test_frozen_master_telemetry_cannot_keep_driving) ... ok
+test_high_speed_ramp_is_preserved (test_teleop_safety.TeleopSafety.test_high_speed_ramp_is_preserved) ... ok
+test_lost_feedback_latches_estop_and_stops_all_commands (test_teleop_safety.TeleopSafety.test_lost_feedback_latches_estop_and_stops_all_commands) ... ok
+test_manual_reference_toggle_blocks_z_and_ignores_key_repeat (test_teleop_safety.TeleopSafety.test_manual_reference_toggle_blocks_z_and_ignores_key_repeat) ... ok
+test_manual_reference_toggle_cannot_change_while_active (test_teleop_safety.TeleopSafety.test_manual_reference_toggle_cannot_change_while_active) ... ok
+test_reverse_still_requires_neutral_brake_and_key_release (test_teleop_safety.TeleopSafety.test_reverse_still_requires_neutral_brake_and_key_release) ... ok
+test_shutdown_never_commands_center_offset (test_teleop_safety.TeleopSafety.test_shutdown_never_commands_center_offset) ... ok
+test_stale_throttle_feedback_cannot_look_like_neutral (test_teleop_safety.TeleopSafety.test_stale_throttle_feedback_cannot_look_like_neutral) ... ok
+test_startup_has_no_left_trim (test_teleop_safety.TeleopSafety.test_startup_has_no_left_trim) ... ok
+test_z_reference_is_only_sent_in_estop (test_teleop_safety.TeleopSafety.test_z_reference_is_only_sent_in_estop) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.258s
+
+OK
+In file included from <HANDOFF>/car2_ws/firmware/teensys/dbw_can.h:30:0,
+                 from <HANDOFF>/car2_ws/firmware/teensys/master.cpp:20,
+                 from <HANDOFF>\car2_ws\tests\master_regression.cpp:2:
+<HANDOFF>\car2_ws\tests\firmware_mocks/FlexCAN_T4.h:6:17: warning: 'mock_ecr' defined but not used [-Wunused-variable]
+ static uint32_t mock_ecr = 0, mock_esr = 0;
+                 ^
+<HANDOFF>\car2_ws\tests\firmware_mocks/FlexCAN_T4.h:6:31: warning: 'mock_esr' defined but not used [-Wunused-variable]
+ static uint32_t mock_ecr = 0, mock_esr = 0;
+                               ^
+PASS master: E-stop wire payload, reference gate, node freshness, reference requirement
+PASS measured steering profile: CRC, asymmetric endpoints, reversed sensor direction, soft margins, rail/wrap/invalid-center rejection
+PASS steering limit test: right travel stops GPIO18, left travel GPIO17, unexpected switch stops either way, retreat, finite bursts and timeouts
+PASS sensor retest: confirmed center gate, selected soft bounds, rail stop, both switch guards, finite bursts and timeouts
+In file included from <HANDOFF>/car2_ws/firmware/teensys/dbw_can.h:30:0,
+                 from <HANDOFF>\car2_ws\tests\watchdog_tick_regression.cpp:8:
+<HANDOFF>\car2_ws\tests\firmware_mocks/FlexCAN_T4.h:6:17: warning: 'mock_ecr' defined but not used [-Wunused-variable]
+ static uint32_t mock_ecr = 0, mock_esr = 0;
+                 ^
+<HANDOFF>\car2_ws\tests\firmware_mocks/FlexCAN_T4.h:6:31: warning: 'mock_esr' defined but not used [-Wunused-variable]
+ static uint32_t mock_ecr = 0, mock_esr = 0;
+                               ^
+steering clock=2001 received=2001 stale=0 reference=1
+steering clock=0 received=0 stale=0 reference=1
+PASS all 3 actuator nodes: clock tick during CAN RX and millis wrap stay fresh; genuine timeouts still stop
+PASS four-node CAN test: unique roles, 100 exchanges, missing-node isolation, error reporting, sequence/time wrap
+PASS actual CAN diagnostic pair: 100 matching PING/PONG exchanges, including sequence wrap
+In file included from <HANDOFF>/car2_ws/firmware/teensys/dbw_can.h:30:0,
+                 from <HANDOFF>\car2_ws\tests\vehicle_pair_regression.cpp:6:
+<HANDOFF>\car2_ws\tests\firmware_mocks/FlexCAN_T4.h:6:17: warning: 'mock_ecr' defined but not used [-Wunused-variable]
+ static uint32_t mock_ecr = 0, mock_esr = 0;
+                 ^
+<HANDOFF>\car2_ws\tests\firmware_mocks/FlexCAN_T4.h:6:31: warning: 'mock_esr' defined but not used [-Wunused-variable]
+ static uint32_t mock_ecr = 0, mock_esr = 0;
+                               ^
+PASS actual repaired master/steering pair: command CRC/ID/layout, reference, active steering, E-stop
+PASS USB jog: finite bursts, arm gate, limits, USB loss, timeout, faults, malformed commands
+In file included from <HANDOFF>/car2_ws/firmware/teensys/dbw_can.h:30:0,
+                 from <HANDOFF>/car2_ws/firmware/teensys/steer.cpp:27,
+                 from <HANDOFF>\car2_ws\tests\steer_regression.cpp:2:
+<HANDOFF>\car2_ws\tests\firmware_mocks/FlexCAN_T4.h:6:17: warning: 'mock_ecr' defined but not used [-Wunused-variable]
+ static uint32_t mock_ecr = 0, mock_esr = 0;
+                 ^
+<HANDOFF>\car2_ws\tests\firmware_mocks/FlexCAN_T4.h:6:31: warning: 'mock_esr' defined but not used [-Wunused-variable]
+ static uint32_t mock_ecr = 0, mock_esr = 0;
+                               ^
+PASS steering: cold boot, legacy frames, E-stop, reference, physical GPIO17/18 labels, either-limit stop/latch, watchdog
+PASS CAN link sender: matching reply required
+PASS CAN link responder: validated request echo
+PASS: offline regression checks completed. No USB device was accessed.

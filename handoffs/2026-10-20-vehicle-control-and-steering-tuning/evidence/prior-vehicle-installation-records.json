@@ -1,0 +1,190 @@
+{
+  "master": {
+    "bundle": "CAR2_VEHICLE_20261016_R02",
+    "role": "MASTER",
+    "usbSerial": "18637540",
+    "portAtFlash": "COM3",
+    "imageSha256": "a9483dfb77652b47c89e35b5599dd5eefd61308f170876ca159755558cf111d7",
+    "verifiedUtc": "2026-10-16T22:25:19.242799+00:00",
+    "verification": "Targeted loader programming succeeded; normal master JSON telemetry verified",
+    "telemetrySamples": 50,
+    "lastTelemetry": {
+      "e": 1,
+      "t": 0.0,
+      "m": "N",
+      "b": 1.0,
+      "s": 0.0,
+      "w": 0,
+      "tv": 0.0,
+      "tm": 0,
+      "sp": 0,
+      "sh": 0,
+      "sf": 0,
+      "bl": 0.0,
+      "bf": 0,
+      "tr": 0,
+      "sr": 0,
+      "br": 0
+    },
+    "verificationLog": "master-verify-20261016-222514Z.log",
+    "actuatorPower": "User confirmed OFF before flash",
+    "motionCommandsSent": false,
+    "normalVehicleCanFeedbackCheck": {
+      "result": "PASS with all r02 images; all three node statuses fresh",
+      "observedUtc": "2026-10-16T23:05:11.940646+00:00",
+      "log": "master-powerup-20261016-230509Z.log"
+    },
+    "originalFlashBundle": "CAR2_VEHICLE_20261016",
+    "r02ImageEquivalence": "Exact SHA256 match; no master reflash required"
+  },
+  "steering": {
+    "bundle": "CAR2_VEHICLE_20261016_R02",
+    "role": "STEERING",
+    "usbSerial": "20369970",
+    "portAtFlash": "COM5",
+    "imageSha256": "2b1ef19888c4d4222b6aa5a67a6ac0c40295cdad7d4a4f17beaa0923506895db",
+    "verifiedUtc": "2026-10-16T22:54:55.407211+00:00",
+    "verification": "Targeted loader programming succeeded; normal steering USB status verified",
+    "statusSamples": 41,
+    "lastStatus": {
+      "right": "open",
+      "left": "open",
+      "fault": "no",
+      "pos": 0,
+      "encoderRaw": 237
+    },
+    "verificationLog": "steering-verify-20261016-225451Z.log",
+    "flashLog": "steering-flash-20261016-225424Z.log",
+    "actuatorPower": "User confirmed vehicle power OFF for correction uploads",
+    "motionCommandsSent": false,
+    "r02CorrectionUpload": "COMPLETE",
+    "normalVehicleCanFeedbackCheck": {
+      "result": "PASS with all r02 images; all three node statuses fresh",
+      "observedUtc": "2026-10-16T23:05:11.940646+00:00",
+      "log": "master-powerup-20261016-230509Z.log"
+    },
+    "poweredActuatorTest": {
+      "result": "PASS: actual wheel sequence confirmed by operator; software reference retained through ten seconds of E-stop",
+      "log": "steering-master-test-20261016-230531Z.jsonl",
+      "observedUtc": "2026-10-16T23:05:51.694330+00:00"
+    },
+    "physicalSwitchMappingRetest": "Pin mapping unchanged: R17/L18. Individual manual checks passed under r01; not repeated for timing-only patch.",
+    "previousFirmware": {
+      "bundle": "CAR2_VEHICLE_20261016",
+      "imageSha256": "a76fbc23fafcf121715fee74a7760b17288030cef6a1a618826bea2104dbd6be",
+      "verifiedUtc": "2026-10-16T22:28:27.811887+00:00"
+    },
+    "rightSwitchManualCheck": {
+      "checkedUtc": "2026-10-16T22:29:59.557118+00:00",
+      "userAction": "Driver right switch held by hand",
+      "passed": true,
+      "samples": 41,
+      "observedStates": [
+        {
+          "right": "PRESSED",
+          "left": "open",
+          "fault": "no",
+          "pos": 0
+        }
+      ],
+      "log": "steering-right-switch-20261016-222955Z.log",
+      "motionCommandsSent": false,
+      "firmwareImageAtCheck": "a76fbc23fafcf121715fee74a7760b17288030cef6a1a618826bea2104dbd6be",
+      "logDirectory": "car2-vehicle-firmware"
+    },
+    "leftSwitchManualCheck": {
+      "checkedUtc": "2026-10-16T22:30:43.577049+00:00",
+      "userAction": "Driver left switch held by hand",
+      "passed": true,
+      "samples": 41,
+      "observedStates": [
+        {
+          "right": "open",
+          "left": "PRESSED",
+          "fault": "no",
+          "pos": 0
+        }
+      ],
+      "log": "steering-left-switch-20261016-223039Z.log",
+      "motionCommandsSent": false,
+      "firmwareImageAtCheck": "a76fbc23fafcf121715fee74a7760b17288030cef6a1a618826bea2104dbd6be",
+      "logDirectory": "car2-vehicle-firmware"
+    }
+  },
+  "throttle": {
+    "bundle": "CAR2_VEHICLE_20261016_R02",
+    "role": "THROTTLE",
+    "usbSerial": "20543040",
+    "portAtFlash": "COM9",
+    "imageSha256": "ea18d86ca95fa3caff99500464384e6bc28f806d2e2b8936ce1b96c2123940a4",
+    "verifiedUtc": "2026-10-16T22:57:29.683474+00:00",
+    "verification": "Targeted loader programming succeeded; normal throttle encoder status verified",
+    "statusSamples": 41,
+    "lastStatus": {
+      "encoderCount": 0,
+      "rpm": 0.0
+    },
+    "verificationLog": "throttle-verify-20261016-225725Z.log",
+    "flashLog": "throttle-flash-20261016-225628Z.log",
+    "actuatorPower": "User confirmed vehicle power OFF for correction uploads",
+    "motionCommandsSent": false,
+    "r02CorrectionUpload": "COMPLETE",
+    "errorsDuringRead": [],
+    "dacOutputAndGearHardwareValidation": "PENDING",
+    "normalVehicleCanFeedbackCheck": {
+      "result": "PASS with all r02 images; all three node statuses fresh",
+      "observedUtc": "2026-10-16T23:05:11.940646+00:00",
+      "log": "master-powerup-20261016-230509Z.log"
+    },
+    "poweredActuatorTest": {
+      "result": "PASS_SOFTWARE_COMMAND_AND_NODE_FEEDBACK_PATH",
+      "isolatedRaisedWheelTest": true,
+      "maximumThrottleCommand": 0.15,
+      "reportedVoltageAtPeak": 1.17,
+      "actualVoltageMeasured": false,
+      "physicalRotation": "FAILED: operator reported no movement at all",
+      "log": "acceleration-master-test-20261016-231026Z.jsonl",
+      "finalEstopAndNeutralAcknowledged": true
+    },
+    "usbArrivalObservation": "Port absent at first post-flash verification; subsequent PnP and serial check confirmed same board; retry succeeded",
+    "previousFirmware": {
+      "bundle": "CAR2_VEHICLE_20261016",
+      "imageSha256": "280ad3f5e2f8de74615dc08fd68ce5376ff0061430211941c1a8b8d137aa0ecb",
+      "verifiedUtc": "2026-10-16T22:33:34.412649+00:00"
+    },
+    "restoredAfterUsbDiagnosticUtc": "2026-10-17T00:09:25.553270+00:00",
+    "restorationRecord": "../car2-acceleration-usb-test/installation.json"
+  },
+  "brake": {
+    "bundle": "CAR2_VEHICLE_20261016_R02",
+    "role": "BRAKE",
+    "usbSerial": "20542540",
+    "portAtFlash": "COM10",
+    "imageSha256": "ae5a0ea1fbd8c7e850663dd09a8833f8b0e817e7692c3577541ae3b110fce621",
+    "verifiedUtc": "2026-10-16T22:59:55.018342+00:00",
+    "verification": "Targeted loader programming completed and expected USB serial returned; normal CAN feedback verification pending",
+    "flashLog": "brake-flash-20261016-225925Z.log",
+    "usbStatusNote": "Normal brake firmware has no repeating USB status; do not require a missed startup banner",
+    "actuatorPower": "User confirmed vehicle power OFF for correction uploads",
+    "motionCommandsSent": false,
+    "r02CorrectionUpload": "COMPLETE",
+    "normalVehicleCanFeedbackCheck": {
+      "result": "PASS with all r02 images; all three node statuses fresh",
+      "observedUtc": "2026-10-16T23:05:11.940646+00:00",
+      "log": "master-powerup-20261016-230509Z.log"
+    },
+    "poweredActuatorTest": {
+      "result": "FAILED: operator reported no actuator movement during three-second release command; reported position remained applied",
+      "releaseCommand": 0,
+      "feedbackPosition": 2.0,
+      "feedbackFlagsActive": 2,
+      "log": "acceleration-master-test-20261016-230619Z.jsonl",
+      "physicalBrakeFunction": "UNRESOLVED"
+    },
+    "previousFirmware": {
+      "bundle": "CAR2_VEHICLE_20261016",
+      "imageSha256": "a1c9b9b3897f44544a85389899f5e422ec773425947e093259a8310532b30b41",
+      "verifiedUtc": "2026-10-16T22:36:41.004395+00:00"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "checkedUtc": "2026-10-20T23:43:30.514477+00:00",
+  "sourceScope": "Only the new dated handoff, in a clean clone of base33db9dd",
+  "hardwareActions": {
+    "openedSerialPort": false,
+    "uploadedFirmware": false,
+    "sentMotionCommand": false
+  },
+  "setup": {
+    "newVenv": true,
+    "python": "3.11",
+    "pinnedRequirementsInstalled": true
+  },
+  "tests": {
+    "pythonUnitTests": {
+      "passed": 16,
+      "failed": 0
+    },
+    "cppRegressionExecutables": {
+      "passed": 12,
+      "failed": 0
+    },
+    "documentedTestWrapperPassed": true
+  },
+  "firmwareBuilds": {
+    "master": {
+      "result": "PASS",
+      "log": "operational-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "newBuildSha256": "a9483dfb77652b47c89e35b5599dd5eefd61308f170876ca159755558cf111d7"
+    },
+    "throttle": {
+      "result": "PASS",
+      "log": "operational-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "newBuildSha256": "ea18d86ca95fa3caff99500464384e6bc28f806d2e2b8936ce1b96c2123940a4"
+    },
+    "steer": {
+      "result": "PASS",
+      "log": "operational-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "newBuildSha256": "5250a929e681813abb43ed1f825f00ee735a24a9553de68cd74ab8dd7b4e22f2"
+    },
+    "brake": {
+      "result": "PASS",
+      "log": "operational-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "newBuildSha256": "ae5a0ea1fbd8c7e850663dd09a8833f8b0e817e7692c3577541ae3b110fce621"
+    },
+    "brake_bench": {
+      "result": "PASS",
+      "log": "operational-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "newBuildSha256": "3a46829b0ef1dc2138cdc38c3aebe0223fb3ce54910dfc2dfdfcb945aa9061b1"
+    },
+    "can_bus_test_master": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "can_bus_test_throttle": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "can_bus_test_steering": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "can_bus_test_brake": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "can_link_sender": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "can_link_responder": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "steer_usb_jog": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "steer_limit_test": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "steer_sensor_test": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    },
+    "throttle_usb_test": {
+      "result": "PASS",
+      "log": "diagnostic-builds-20261020.log",
+      "newBuildNotAnArchivedInstallationImage": true,
+      "buildOutputNote": "Temporary .pio output cleaned when the non-default brake_bench environment was added; successful build retained in log"
+    }
+  },
+  "scripts": {
+    "powershellParseCount": 7,
+    "powershellParseResult": "PASS",
+    "pythonSyntax": "PASS",
+    "jsonParse": "PASS",
+    "uploadValidateOnly": "PASS; identity selection/hashes/tools only, no USB opened"
+  },
+  "limitations": [
+    "No new physical car test or upload during publication",
+    "Historical HEX files preserved separately from rebuilt artifacts",
+    "Normal steering still manual reference; analog profile/automatic startup centering deferred",
+    "No measured wheel degrees or loaded brake/vehicle validation"
+  ]
+}

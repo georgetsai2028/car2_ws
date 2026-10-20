@@ -1,0 +1,43 @@
+{
+  "test": "CAN_TEST_V1",
+  "board": "Teensy 4.1",
+  "can": {
+    "controller": "CAN1",
+    "tx_pin": 22,
+    "rx_pin": 23,
+    "bitrate": 250000
+  },
+  "source_sha256": "0e0d319c1d441ea0ee80cd1147d8855b893bd2ec53a0d14f2170fd132305753e",
+  "images": {
+    "master": {
+      "node_id": 0,
+      "file": "master.hex",
+      "sha256": "a5461fe271d92e1d7697fe3944ba4805f7a0078140daddd0e3960a1bdf708444",
+      "request_can_id": null,
+      "reply_can_id": null
+    },
+    "throttle": {
+      "node_id": 1,
+      "file": "throttle.hex",
+      "sha256": "a0eccedc7e5790f0be0ea009b14b649aa4ee5ae1844b1634e2af44610ea6bc8e",
+      "request_can_id": "0x6b1",
+      "reply_can_id": "0x6c1"
+    },
+    "steering": {
+      "node_id": 2,
+      "file": "steering.hex",
+      "sha256": "b97187ddd86165bc14d2902fcd96d06f31811c963427b326633d354262d0e5ae",
+      "request_can_id": "0x6b2",
+      "reply_can_id": "0x6c2"
+    },
+    "brake": {
+      "node_id": 3,
+      "file": "brake.hex",
+      "sha256": "80499008d80b6c39f45a115962d13f44380a956334a52ffbd4c4b3415b883540",
+      "request_can_id": "0x6b3",
+      "reply_can_id": "0x6c3"
+    }
+  },
+  "installed": false,
+  "note": "Installation state at packaging only; consult live board output and hardware-state.md."
+}

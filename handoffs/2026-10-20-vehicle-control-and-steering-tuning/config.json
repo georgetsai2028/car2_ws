@@ -1,0 +1,32 @@
+{
+  "board": "Teensy 4.1",
+  "boards": {
+    "master": {
+      "serial": "18637540",
+      "lastPort": "COM3"
+    },
+    "steering": {
+      "serial": "20369970",
+      "lastPort": "COM5"
+    },
+    "throttle": {
+      "serial": "20543040",
+      "lastPort": "COM9"
+    },
+    "brake": {
+      "serial": "20542540",
+      "lastPort": "COM10"
+    }
+  },
+  "usbBaud": 115200,
+  "canBitrate": 250000,
+  "canController": "CAN1",
+  "canTX": 22,
+  "canRX": 23,
+  "steeringLimitsPulses": [
+    -8250,
+    10000
+  ],
+  "steeringReference": "manual-physical-center-Z",
+  "automaticStartupCentering": false
+}

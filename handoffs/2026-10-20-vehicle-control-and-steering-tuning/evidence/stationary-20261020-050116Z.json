@@ -1,0 +1,39 @@
+{
+  "observedUtc": "2026-10-20T05:01:16.854170+00:00",
+  "port": "COM5",
+  "usbSerial": "20369970",
+  "statusFrames": 21,
+  "first": {
+    "right": "open",
+    "left": "open",
+    "fault": "no",
+    "position": 0,
+    "encoderRaw": 213
+  },
+  "last": {
+    "right": "open",
+    "left": "open",
+    "fault": "no",
+    "position": 0,
+    "encoderRaw": 214
+  },
+  "encoderRange": [
+    210,
+    216
+  ],
+  "rightStates": [
+    "open"
+  ],
+  "leftStates": [
+    "open"
+  ],
+  "faultStates": [
+    "no"
+  ],
+  "commandsSent": false,
+  "firmwareChanged": false,
+  "serialPortClosed": true,
+  "errors": [],
+  "log": "stationary-20261020-050116Z.log",
+  "limit": "Stationary readings do not validate full-range sensor linearity, input voltage or travel calibration."
+}

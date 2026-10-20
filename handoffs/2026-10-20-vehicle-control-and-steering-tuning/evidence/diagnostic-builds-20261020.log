@@ -1,0 +1,1304 @@
+Processing steer_usb_jog (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Library Manager: Installing adafruit/Adafruit MCP4725 @ 2.0.2
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit MCP4725@2.0.2 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing Adafruit BusIO
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit BusIO@1.17.4 has been installed!
+Library Manager: Installing waspinator/AccelStepper @ 1.64
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: AccelStepper@1.64.0 has been installed!
+Library Manager: Installing paulstoffregen/Encoder @ 1.4.4
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Encoder@1.4.4 has been installed!
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 96 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit MCP4725 @ 2.0.2
+|-- Adafruit BusIO @ 1.17.4
+|-- AccelStepper @ 1.64.0
+|-- Encoder @ 1.4.4
+Building in release mode
+Compiling .pio\build\steer_usb_jog\src\steer_usb_jog.cpp.o
+Compiling .pio\build\steer_usb_jog\lib524\Wire\Wire.cpp.o
+Compiling .pio\build\steer_usb_jog\lib524\Wire\WireIMXRT.cpp.o
+Compiling .pio\build\steer_usb_jog\lib524\Wire\WireKinetis.cpp.o
+Compiling .pio\build\steer_usb_jog\lib524\Wire\utility\twi.c.o
+Compiling .pio\build\steer_usb_jog\lib5f4\SPI\SPI.cpp.o
+Compiling .pio\build\steer_usb_jog\libb71\Adafruit BusIO\Adafruit_BusIO_Register.cpp.o
+Compiling .pio\build\steer_usb_jog\libb71\Adafruit BusIO\Adafruit_GenericDevice.cpp.o
+Compiling .pio\build\steer_usb_jog\libb71\Adafruit BusIO\Adafruit_I2CDevice.cpp.o
+Compiling .pio\build\steer_usb_jog\libb71\Adafruit BusIO\Adafruit_SPIDevice.cpp.o
+Compiling .pio\build\steer_usb_jog\lib4f2\Adafruit MCP4725\Adafruit_MCP4725.cpp.o
+Compiling .pio\build\steer_usb_jog\libee4\AccelStepper\AccelStepper.cpp.o
+Compiling .pio\build\steer_usb_jog\libee4\AccelStepper\MultiStepper.cpp.o
+Archiving .pio\build\steer_usb_jog\lib524\libWire.a
+Compiling .pio\build\steer_usb_jog\lib038\Encoder\Encoder.cpp.o
+Archiving .pio\build\steer_usb_jog\lib5f4\libSPI.a
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\DMAChannel.cpp.o
+Archiving .pio\build\steer_usb_jog\libb71\libAdafruit BusIO.a
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial.cpp.o
+Archiving .pio\build\steer_usb_jog\lib038\libEncoder.a
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial1.cpp.o
+Archiving .pio\build\steer_usb_jog\libee4\libAccelStepper.a
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial2.cpp.o
+Archiving .pio\build\steer_usb_jog\lib4f2\libAdafruit MCP4725.a
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\analog.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\delay.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\digital.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\extmem.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\fuse.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\main.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\memset.S.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\new.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\pwm.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\rtc.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\startup.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\steer_usb_jog\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\steer_usb_jog\libFrameworkArduino.a
+Linking .pio\build\steer_usb_jog\firmware.elf
+Calculating size .pio\build\steer_usb_jog\firmware.elf
+Checking size .pio\build\steer_usb_jog\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:39280, data:6088, headers:8900   free for files:8072196
+teensy_size:    RAM1: variables:7488, code:36760, padding:28776   free for local variables:451264
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\steer_usb_jog\firmware.hex
+========================= [SUCCESS] Took 19.28 seconds =========================
+
+Processing steer_limit_test (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Library Manager: Installing adafruit/Adafruit MCP4725 @ 2.0.2
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit MCP4725@2.0.2 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing Adafruit BusIO
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit BusIO@1.17.4 has been installed!
+Library Manager: Installing waspinator/AccelStepper @ 1.64
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: AccelStepper@1.64.0 has been installed!
+Library Manager: Installing paulstoffregen/Encoder @ 1.4.4
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Encoder@1.4.4 has been installed!
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 96 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit MCP4725 @ 2.0.2
+|-- Adafruit BusIO @ 1.17.4
+|-- AccelStepper @ 1.64.0
+|-- Encoder @ 1.4.4
+Building in release mode
+Compiling .pio\build\steer_limit_test\src\steer_limit_test.cpp.o
+Compiling .pio\build\steer_limit_test\lib524\Wire\Wire.cpp.o
+Compiling .pio\build\steer_limit_test\lib524\Wire\WireIMXRT.cpp.o
+Compiling .pio\build\steer_limit_test\lib524\Wire\WireKinetis.cpp.o
+Compiling .pio\build\steer_limit_test\lib524\Wire\utility\twi.c.o
+Compiling .pio\build\steer_limit_test\lib5f4\SPI\SPI.cpp.o
+Compiling .pio\build\steer_limit_test\libdd2\Adafruit BusIO\Adafruit_BusIO_Register.cpp.o
+Compiling .pio\build\steer_limit_test\libdd2\Adafruit BusIO\Adafruit_GenericDevice.cpp.o
+Compiling .pio\build\steer_limit_test\libdd2\Adafruit BusIO\Adafruit_I2CDevice.cpp.o
+Compiling .pio\build\steer_limit_test\libdd2\Adafruit BusIO\Adafruit_SPIDevice.cpp.o
+Compiling .pio\build\steer_limit_test\lib649\Adafruit MCP4725\Adafruit_MCP4725.cpp.o
+Compiling .pio\build\steer_limit_test\libb6d\AccelStepper\AccelStepper.cpp.o
+Compiling .pio\build\steer_limit_test\libb6d\AccelStepper\MultiStepper.cpp.o
+Archiving .pio\build\steer_limit_test\lib524\libWire.a
+Compiling .pio\build\steer_limit_test\lib3de\Encoder\Encoder.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\AudioStream.cpp.o
+Archiving .pio\build\steer_limit_test\lib5f4\libSPI.a
+Compiling .pio\build\steer_limit_test\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\DMAChannel.cpp.o
+Archiving .pio\build\steer_limit_test\lib649\libAdafruit MCP4725.a
+Archiving .pio\build\steer_limit_test\libdd2\libAdafruit BusIO.a
+Archiving .pio\build\steer_limit_test\lib3de\libEncoder.a
+Compiling .pio\build\steer_limit_test\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial1.cpp.o
+Archiving .pio\build\steer_limit_test\libb6d\libAccelStepper.a
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\analog.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\delay.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\digital.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\extmem.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\fuse.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\main.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\memset.S.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\new.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\pwm.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\rtc.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\startup.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\steer_limit_test\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\steer_limit_test\libFrameworkArduino.a
+Linking .pio\build\steer_limit_test\firmware.elf
+Calculating size .pio\build\steer_limit_test\firmware.elf
+Checking size .pio\build\steer_limit_test\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:40560, data:7112, headers:8644   free for files:8070148
+teensy_size:    RAM1: variables:8544, code:38040, padding:27496   free for local variables:450208
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\steer_limit_test\firmware.hex
+========================= [SUCCESS] Took 19.61 seconds =========================
+
+Processing steer_sensor_test (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Library Manager: Installing adafruit/Adafruit MCP4725 @ 2.0.2
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit MCP4725@2.0.2 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing Adafruit BusIO
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit BusIO@1.17.4 has been installed!
+Library Manager: Installing waspinator/AccelStepper @ 1.64
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: AccelStepper@1.64.0 has been installed!
+Library Manager: Installing paulstoffregen/Encoder @ 1.4.4
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Encoder@1.4.4 has been installed!
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 96 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit MCP4725 @ 2.0.2
+|-- Adafruit BusIO @ 1.17.4
+|-- AccelStepper @ 1.64.0
+|-- Encoder @ 1.4.4
+Building in release mode
+Compiling .pio\build\steer_sensor_test\src\steer_sensor_test.cpp.o
+Compiling .pio\build\steer_sensor_test\lib524\Wire\Wire.cpp.o
+Compiling .pio\build\steer_sensor_test\lib524\Wire\WireIMXRT.cpp.o
+Compiling .pio\build\steer_sensor_test\lib524\Wire\WireKinetis.cpp.o
+Compiling .pio\build\steer_sensor_test\lib524\Wire\utility\twi.c.o
+Compiling .pio\build\steer_sensor_test\lib5f4\SPI\SPI.cpp.o
+Compiling .pio\build\steer_sensor_test\libfe5\Adafruit BusIO\Adafruit_BusIO_Register.cpp.o
+Compiling .pio\build\steer_sensor_test\libfe5\Adafruit BusIO\Adafruit_GenericDevice.cpp.o
+Compiling .pio\build\steer_sensor_test\libfe5\Adafruit BusIO\Adafruit_I2CDevice.cpp.o
+Compiling .pio\build\steer_sensor_test\libfe5\Adafruit BusIO\Adafruit_SPIDevice.cpp.o
+Compiling .pio\build\steer_sensor_test\lib484\Adafruit MCP4725\Adafruit_MCP4725.cpp.o
+Compiling .pio\build\steer_sensor_test\lib169\AccelStepper\AccelStepper.cpp.o
+Compiling .pio\build\steer_sensor_test\lib169\AccelStepper\MultiStepper.cpp.o
+Archiving .pio\build\steer_sensor_test\lib524\libWire.a
+Compiling .pio\build\steer_sensor_test\lib255\Encoder\Encoder.cpp.o
+Archiving .pio\build\steer_sensor_test\lib5f4\libSPI.a
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\DMAChannel.cpp.o
+Archiving .pio\build\steer_sensor_test\lib484\libAdafruit MCP4725.a
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\EventResponder.cpp.o
+Archiving .pio\build\steer_sensor_test\libfe5\libAdafruit BusIO.a
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial2.cpp.o
+Archiving .pio\build\steer_sensor_test\lib255\libEncoder.a
+Archiving .pio\build\steer_sensor_test\lib169\libAccelStepper.a
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\analog.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\delay.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\digital.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\extmem.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\fuse.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\main.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\memset.S.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\new.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\pwm.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\rtc.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\startup.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\steer_sensor_test\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\steer_sensor_test\libFrameworkArduino.a
+Linking .pio\build\steer_sensor_test\firmware.elf
+Calculating size .pio\build\steer_sensor_test\firmware.elf
+Checking size .pio\build\steer_sensor_test\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:40752, data:7112, headers:8452   free for files:8070148
+teensy_size:    RAM1: variables:8544, code:38232, padding:27304   free for local variables:450208
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\steer_sensor_test\firmware.hex
+========================= [SUCCESS] Took 18.35 seconds =========================
+
+Processing throttle_usb_test (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Library Manager: Installing adafruit/Adafruit MCP4725 @ 2.0.2
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit MCP4725@2.0.2 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing Adafruit BusIO
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit BusIO@1.17.4 has been installed!
+Library Manager: Installing waspinator/AccelStepper @ 1.64
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: AccelStepper@1.64.0 has been installed!
+Library Manager: Installing paulstoffregen/Encoder @ 1.4.4
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Encoder@1.4.4 has been installed!
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 96 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit MCP4725 @ 2.0.2
+|-- Adafruit BusIO @ 1.17.4
+|-- AccelStepper @ 1.64.0
+|-- Encoder @ 1.4.4
+|-- Wire @ 1.0
+Building in release mode
+Compiling .pio\build\throttle_usb_test\src\throttle_usb_test.cpp.o
+Compiling .pio\build\throttle_usb_test\lib524\Wire\Wire.cpp.o
+Compiling .pio\build\throttle_usb_test\lib524\Wire\WireIMXRT.cpp.o
+Compiling .pio\build\throttle_usb_test\lib524\Wire\WireKinetis.cpp.o
+Compiling .pio\build\throttle_usb_test\lib524\Wire\utility\twi.c.o
+Compiling .pio\build\throttle_usb_test\lib5f4\SPI\SPI.cpp.o
+Compiling .pio\build\throttle_usb_test\lib63b\Adafruit BusIO\Adafruit_BusIO_Register.cpp.o
+Compiling .pio\build\throttle_usb_test\lib63b\Adafruit BusIO\Adafruit_GenericDevice.cpp.o
+Compiling .pio\build\throttle_usb_test\lib63b\Adafruit BusIO\Adafruit_I2CDevice.cpp.o
+Compiling .pio\build\throttle_usb_test\lib63b\Adafruit BusIO\Adafruit_SPIDevice.cpp.o
+Compiling .pio\build\throttle_usb_test\lib1fc\Adafruit MCP4725\Adafruit_MCP4725.cpp.o
+Compiling .pio\build\throttle_usb_test\lib9b5\AccelStepper\AccelStepper.cpp.o
+Archiving .pio\build\throttle_usb_test\lib524\libWire.a
+Compiling .pio\build\throttle_usb_test\lib9b5\AccelStepper\MultiStepper.cpp.o
+Compiling .pio\build\throttle_usb_test\lib6e0\Encoder\Encoder.cpp.o
+Archiving .pio\build\throttle_usb_test\lib5f4\libSPI.a
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\DMAChannel.cpp.o
+Archiving .pio\build\throttle_usb_test\lib63b\libAdafruit BusIO.a
+Archiving .pio\build\throttle_usb_test\lib1fc\libAdafruit MCP4725.a
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial1.cpp.o
+Archiving .pio\build\throttle_usb_test\lib9b5\libAccelStepper.a
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial2.cpp.o
+Archiving .pio\build\throttle_usb_test\lib6e0\libEncoder.a
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\analog.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\delay.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\digital.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\extmem.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\fuse.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\main.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\memset.S.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\new.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\pwm.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\rtc.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\startup.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\throttle_usb_test\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\throttle_usb_test\libFrameworkArduino.a
+Linking .pio\build\throttle_usb_test\firmware.elf
+Checking size .pio\build\throttle_usb_test\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+Calculating size .pio\build\throttle_usb_test\firmware.elf
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:49256, data:8376, headers:8924   free for files:8059908
+teensy_size:    RAM1: variables:9280, code:46352, padding:19184   free for local variables:449472
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\throttle_usb_test\firmware.hex
+========================= [SUCCESS] Took 18.56 seconds =========================
+
+Processing can_bus_test_master (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 92 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\can_bus_test_master\src\can_bus_test.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\DMAChannel.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\analog.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\delay.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\digital.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\extmem.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\fuse.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\main.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\memset.S.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\new.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\pwm.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\rtc.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\startup.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\can_bus_test_master\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\can_bus_test_master\libFrameworkArduino.a
+Linking .pio\build\can_bus_test_master\firmware.elf
+Calculating size .pio\build\can_bus_test_master\firmware.elf
+Checking size .pio\build\can_bus_test_master\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:42200, data:5064, headers:9052   free for files:8070148
+teensy_size:    RAM1: variables:16544, code:39680, padding:25856   free for local variables:442208
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\can_bus_test_master\firmware.hex
+========================= [SUCCESS] Took 13.11 seconds =========================
+
+Processing can_bus_test_throttle (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 92 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\can_bus_test_throttle\src\can_bus_test.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\DMAChannel.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\analog.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\delay.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\digital.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\extmem.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\fuse.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\main.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\memset.S.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\new.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\pwm.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\rtc.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\startup.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\can_bus_test_throttle\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\can_bus_test_throttle\libFrameworkArduino.a
+Linking .pio\build\can_bus_test_throttle\firmware.elf
+Checking size .pio\build\can_bus_test_throttle\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+Calculating size .pio\build\can_bus_test_throttle\firmware.elf
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:41944, data:5064, headers:8284   free for files:8071172
+teensy_size:    RAM1: variables:16480, code:39424, padding:26112   free for local variables:442272
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\can_bus_test_throttle\firmware.hex
+========================= [SUCCESS] Took 13.07 seconds =========================
+
+Processing can_bus_test_steering (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 92 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\can_bus_test_steering\src\can_bus_test.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\DMAChannel.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\analog.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\delay.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\digital.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\extmem.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\fuse.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\main.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\memset.S.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\new.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\pwm.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\rtc.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\startup.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\can_bus_test_steering\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\can_bus_test_steering\libFrameworkArduino.a
+Linking .pio\build\can_bus_test_steering\firmware.elf
+Checking size .pio\build\can_bus_test_steering\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+Calculating size .pio\build\can_bus_test_steering\firmware.elf
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:41944, data:5064, headers:8284   free for files:8071172
+teensy_size:    RAM1: variables:16480, code:39424, padding:26112   free for local variables:442272
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\can_bus_test_steering\firmware.hex
+========================= [SUCCESS] Took 12.33 seconds =========================
+
+Processing can_bus_test_brake (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 92 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\can_bus_test_brake\src\can_bus_test.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\DMAChannel.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\analog.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\delay.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\digital.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\extmem.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\fuse.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\main.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\memset.S.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\new.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\pwm.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\rtc.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\startup.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\can_bus_test_brake\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\can_bus_test_brake\libFrameworkArduino.a
+Linking .pio\build\can_bus_test_brake\firmware.elf
+Checking size .pio\build\can_bus_test_brake\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+Calculating size .pio\build\can_bus_test_brake\firmware.elf
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:41944, data:5064, headers:8284   free for files:8071172
+teensy_size:    RAM1: variables:16480, code:39424, padding:26112   free for local variables:442272
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\can_bus_test_brake\firmware.hex
+========================= [SUCCESS] Took 12.46 seconds =========================
+
+Processing can_link_sender (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 92 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\can_link_sender\src\can_link_test.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\DMAChannel.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\analog.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\delay.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\digital.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\extmem.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\fuse.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\main.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\memset.S.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\new.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\pwm.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\rtc.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\startup.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\can_link_sender\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\can_link_sender\libFrameworkArduino.a
+Linking .pio\build\can_link_sender\firmware.elf
+Calculating size .pio\build\can_link_sender\firmware.elf
+Checking size .pio\build\can_link_sender\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:41944, data:5064, headers:8284   free for files:8071172
+teensy_size:    RAM1: variables:16480, code:39424, padding:26112   free for local variables:442272
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\can_link_sender\firmware.hex
+========================= [SUCCESS] Took 12.50 seconds =========================
+
+Processing can_link_responder (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 92 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\can_link_responder\src\can_link_test.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\DMAChannel.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\analog.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\delay.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\digital.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\extmem.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\fuse.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\main.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\memset.S.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\new.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\pwm.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\rtc.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\startup.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\can_link_responder\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\can_link_responder\libFrameworkArduino.a
+Linking .pio\build\can_link_responder\firmware.elf
+Calculating size .pio\build\can_link_responder\firmware.elf
+Checking size .pio\build\can_link_responder\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:41816, data:5064, headers:8412   free for files:8071172
+teensy_size:    RAM1: variables:16480, code:39296, padding:26240   free for local variables:442272
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\can_link_responder\firmware.hex
+========================= [SUCCESS] Took 12.95 seconds =========================
+
+Environment            Status    Duration
+---------------------  --------  ------------
+steer_usb_jog          SUCCESS   00:00:19.280
+steer_limit_test       SUCCESS   00:00:19.613
+steer_sensor_test      SUCCESS   00:00:18.352
+throttle_usb_test      SUCCESS   00:00:18.562
+can_bus_test_master    SUCCESS   00:00:13.113
+can_bus_test_throttle  SUCCESS   00:00:13.072
+can_bus_test_steering  SUCCESS   00:00:12.331
+can_bus_test_brake     SUCCESS   00:00:12.459
+can_link_sender        SUCCESS   00:00:12.504
+can_link_responder     SUCCESS   00:00:12.945
+========================= 10 succeeded in 00:02:32.231 =========================

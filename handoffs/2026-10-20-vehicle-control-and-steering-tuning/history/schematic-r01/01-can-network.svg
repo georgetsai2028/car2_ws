@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190.55pt" height="841.89pt" viewBox="0 0 1190.55 841.89">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect x="36" y="28" width="7" height="47" rx="0" stroke="#00817D" fill="#00817D"/>
+<text x="55.00" y="48.00" font-size="22" fill="#163047" font-weight="bold" text-anchor="start">Car2 / CAN network and controller wiring</text>
+<text x="55.00" y="70.00" font-size="10.5" fill="#697786" font-weight="normal" text-anchor="start">Physical cable order supplied by user: acceleration -&gt; master -&gt; steering -&gt; brake</text>
+<text x="1154.55" y="45.00" font-size="10" fill="#A76000" font-weight="bold" text-anchor="end">DRAFT r01 / REVIEW</text>
+<polyline points="36.00,86.00 1154.55,86.00" fill="none" stroke="#CDD7E0" stroke-width="1"/>
+<text x="36.00" y="108.00" font-size="9" fill="#00817D" font-weight="bold" text-anchor="start">[U] user report or live observation</text>
+<text x="277.00" y="108.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="start">[R] repository / intended wiring</text>
+<text x="526.00" y="108.00" font-size="9" fill="#A76000" font-weight="bold" text-anchor="start">[?] needs confirmation</text>
+<text x="1154.55" y="108.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="end">Dashed amber = unverified detail</text>
+<polyline points="65.00,173.00 1125.00,173.00" fill="none" stroke="#A76000" stroke-width="1.6" stroke-dasharray="5 3"/>
+<text x="65.00" y="164.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">LOGIC VIN SUPPLY [?] - 5 V expected; verify buck output [Q03]</text>
+<rect x="364" y="119" width="180" height="34" rx="4" stroke="#315BA3" fill="white"/>
+<text x="454.00" y="141.00" font-size="11" fill="#315BA3" font-weight="bold" text-anchor="middle">PC / USB serial [U]</text>
+<polyline points="454.00,153.00 454.00,230.00" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<polyline points="451.23,224.68 454.00,230.00 456.77,224.68" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<text x="464.00" y="205.00" font-size="8.5" fill="#315BA3" font-weight="normal" text-anchor="start">115200 baud</text>
+<text x="464.00" y="219.00" font-size="8" fill="#697786" font-weight="normal" text-anchor="start">USB power: see sheet 3</text>
+<rect x="40" y="230" width="255" height="105" rx="5" stroke="#315BA3" fill="#F0F5FC"/>
+<text x="167.50" y="253.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="middle">ACCELERATION / THROTTLE</text>
+<text x="167.50" y="272.00" font-size="11" fill="#315BA3" font-weight="normal" text-anchor="middle">Teensy 4.1 [R/U]</text>
+<text x="167.50" y="291.00" font-size="8.5" fill="#697786" font-weight="normal" text-anchor="middle">Role / pin map: throttle.cpp [R]</text>
+<polyline points="69.00,173.00 69.00,230.00" fill="none" stroke="#A76000" stroke-width="1.2" stroke-dasharray="5 3"/>
+<polyline points="66.23,224.68 69.00,230.00 71.77,224.68" fill="none" stroke="#A76000" stroke-width="1.2"/>
+<circle cx="69" cy="173" r="2.6" fill="#A76000" stroke="#A76000"/>
+<text x="76.00" y="220.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="start">VIN [?]</text>
+<text x="70.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">22 TX</text>
+<text x="130.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">23 RX</text>
+<text x="190.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">3.3 V</text>
+<text x="250.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">GND</text>
+<rect x="53" y="385" width="229" height="80" rx="4" stroke="#00817D" fill="#EDF9F7"/>
+<text x="167.50" y="427.00" font-size="10" fill="#00817D" font-weight="bold" text-anchor="middle">3.3 V CAN transceiver [U]</text>
+<text x="167.50" y="445.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">SN65HVD230-type: verify chip [Q01]</text>
+<text x="70.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">TXD / D</text>
+<text x="130.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">RXD / R</text>
+<text x="190.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">VCC</text>
+<text x="250.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">GND</text>
+<polyline points="70.00,335.00 70.00,385.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="67.23,379.68 70.00,385.00 72.77,379.68" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="130.00,385.00 130.00,335.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="132.77,340.32 130.00,335.00 127.23,340.32" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="190.00,335.00 190.00,385.00" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="187.23,379.68 190.00,385.00 192.77,379.68" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="250.00,335.00 250.00,385.00" fill="none" stroke="#697786" stroke-width="1.5"/>
+<text x="120.00" y="459.00" font-size="9" fill="#00817D" font-weight="bold" text-anchor="middle">H</text>
+<text x="204.00" y="459.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="middle">L</text>
+<polyline points="120.00,465.00 120.00,535.00" fill="none" stroke="#00817D" stroke-width="1.8"/>
+<circle cx="120" cy="535" r="2.6" fill="#00817D" stroke="#00817D"/>
+<polyline points="204.00,465.00 204.00,528.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<path d="M204,528 C213,528 213,542 204,542" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<polyline points="204.00,542.00 204.00,575.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<circle cx="204" cy="575" r="2.6" fill="#315BA3" stroke="#315BA3"/>
+<polyline points="295.00,295.00 305.00,295.00 305.00,518.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="287.00" y="307.00" font-size="7.5" fill="#697786" font-weight="normal" text-anchor="end">GND</text>
+<polyline points="305.00,518.00 305.00,528.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<path d="M305,528 C314,528 314,542 305,542" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="305.00,542.00 305.00,568.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<path d="M305,568 C314,568 314,582 305,582" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="305.00,582.00 305.00,640.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<circle cx="305" cy="640" r="2.6" fill="#697786" stroke="#697786"/>
+<rect x="320" y="230" width="255" height="105" rx="5" stroke="#315BA3" fill="#F0F5FC"/>
+<text x="447.50" y="253.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="middle">MASTER</text>
+<text x="447.50" y="272.00" font-size="11" fill="#315BA3" font-weight="normal" text-anchor="middle">Teensy 4.1 [R/U]</text>
+<text x="447.50" y="291.00" font-size="8.5" fill="#697786" font-weight="normal" text-anchor="middle">Role / pin map: master.cpp [R]</text>
+<polyline points="349.00,173.00 349.00,230.00" fill="none" stroke="#A76000" stroke-width="1.2" stroke-dasharray="5 3"/>
+<polyline points="346.23,224.68 349.00,230.00 351.77,224.68" fill="none" stroke="#A76000" stroke-width="1.2"/>
+<circle cx="349" cy="173" r="2.6" fill="#A76000" stroke="#A76000"/>
+<text x="356.00" y="220.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="start">VIN [?]</text>
+<text x="350.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">22 TX</text>
+<text x="410.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">23 RX</text>
+<text x="470.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">3.3 V</text>
+<text x="530.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">GND</text>
+<rect x="333" y="385" width="229" height="80" rx="4" stroke="#00817D" fill="#EDF9F7"/>
+<text x="447.50" y="427.00" font-size="10" fill="#00817D" font-weight="bold" text-anchor="middle">3.3 V CAN transceiver [U]</text>
+<text x="447.50" y="445.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">SN65HVD230-type: verify chip [Q01]</text>
+<text x="350.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">TXD / D</text>
+<text x="410.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">RXD / R</text>
+<text x="470.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">VCC</text>
+<text x="530.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">GND</text>
+<polyline points="350.00,335.00 350.00,385.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="347.23,379.68 350.00,385.00 352.77,379.68" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="410.00,385.00 410.00,335.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="412.77,340.32 410.00,335.00 407.23,340.32" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="470.00,335.00 470.00,385.00" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="467.23,379.68 470.00,385.00 472.77,379.68" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="530.00,335.00 530.00,385.00" fill="none" stroke="#697786" stroke-width="1.5"/>
+<text x="400.00" y="459.00" font-size="9" fill="#00817D" font-weight="bold" text-anchor="middle">H</text>
+<text x="484.00" y="459.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="middle">L</text>
+<polyline points="400.00,465.00 400.00,535.00" fill="none" stroke="#00817D" stroke-width="1.8"/>
+<circle cx="400" cy="535" r="2.6" fill="#00817D" stroke="#00817D"/>
+<polyline points="484.00,465.00 484.00,528.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<path d="M484,528 C493,528 493,542 484,542" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<polyline points="484.00,542.00 484.00,575.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<circle cx="484" cy="575" r="2.6" fill="#315BA3" stroke="#315BA3"/>
+<polyline points="575.00,295.00 585.00,295.00 585.00,518.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="567.00" y="307.00" font-size="7.5" fill="#697786" font-weight="normal" text-anchor="end">GND</text>
+<polyline points="585.00,518.00 585.00,528.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<path d="M585,528 C594,528 594,542 585,542" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="585.00,542.00 585.00,568.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<path d="M585,568 C594,568 594,582 585,582" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="585.00,582.00 585.00,640.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<circle cx="585" cy="640" r="2.6" fill="#697786" stroke="#697786"/>
+<rect x="600" y="230" width="255" height="105" rx="5" stroke="#315BA3" fill="#F0F5FC"/>
+<text x="727.50" y="253.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="middle">STEERING</text>
+<text x="727.50" y="272.00" font-size="11" fill="#315BA3" font-weight="normal" text-anchor="middle">Teensy 4.1 [R/U]</text>
+<text x="727.50" y="291.00" font-size="8.5" fill="#697786" font-weight="normal" text-anchor="middle">Role / pin map: steer.cpp [R]</text>
+<polyline points="629.00,173.00 629.00,230.00" fill="none" stroke="#A76000" stroke-width="1.2" stroke-dasharray="5 3"/>
+<polyline points="626.23,224.68 629.00,230.00 631.77,224.68" fill="none" stroke="#A76000" stroke-width="1.2"/>
+<circle cx="629" cy="173" r="2.6" fill="#A76000" stroke="#A76000"/>
+<text x="636.00" y="220.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="start">VIN [?]</text>
+<text x="630.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">22 TX</text>
+<text x="690.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">23 RX</text>
+<text x="750.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">3.3 V</text>
+<text x="810.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">GND</text>
+<rect x="613" y="385" width="229" height="80" rx="4" stroke="#00817D" fill="#EDF9F7"/>
+<text x="727.50" y="427.00" font-size="10" fill="#00817D" font-weight="bold" text-anchor="middle">3.3 V CAN transceiver [U]</text>
+<text x="727.50" y="445.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">SN65HVD230-type: verify chip [Q01]</text>
+<text x="630.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">TXD / D</text>
+<text x="690.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">RXD / R</text>
+<text x="750.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">VCC</text>
+<text x="810.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">GND</text>
+<polyline points="630.00,335.00 630.00,385.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="627.23,379.68 630.00,385.00 632.77,379.68" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="690.00,385.00 690.00,335.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="692.77,340.32 690.00,335.00 687.23,340.32" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="750.00,335.00 750.00,385.00" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="747.23,379.68 750.00,385.00 752.77,379.68" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="810.00,335.00 810.00,385.00" fill="none" stroke="#697786" stroke-width="1.5"/>
+<text x="680.00" y="459.00" font-size="9" fill="#00817D" font-weight="bold" text-anchor="middle">H</text>
+<text x="764.00" y="459.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="middle">L</text>
+<polyline points="680.00,465.00 680.00,535.00" fill="none" stroke="#00817D" stroke-width="1.8"/>
+<circle cx="680" cy="535" r="2.6" fill="#00817D" stroke="#00817D"/>
+<polyline points="764.00,465.00 764.00,528.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<path d="M764,528 C773,528 773,542 764,542" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<polyline points="764.00,542.00 764.00,575.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<circle cx="764" cy="575" r="2.6" fill="#315BA3" stroke="#315BA3"/>
+<polyline points="855.00,295.00 865.00,295.00 865.00,518.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="847.00" y="307.00" font-size="7.5" fill="#697786" font-weight="normal" text-anchor="end">GND</text>
+<polyline points="865.00,518.00 865.00,528.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<path d="M865,528 C874,528 874,542 865,542" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="865.00,542.00 865.00,568.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<path d="M865,568 C874,568 874,582 865,582" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="865.00,582.00 865.00,640.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<circle cx="865" cy="640" r="2.6" fill="#697786" stroke="#697786"/>
+<rect x="880" y="230" width="255" height="105" rx="5" stroke="#315BA3" fill="#F0F5FC"/>
+<text x="1007.50" y="253.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="middle">BRAKE</text>
+<text x="1007.50" y="272.00" font-size="11" fill="#315BA3" font-weight="normal" text-anchor="middle">Teensy 4.1 [R/U]</text>
+<text x="1007.50" y="291.00" font-size="8.5" fill="#697786" font-weight="normal" text-anchor="middle">Role / pin map: brake.cpp [R]</text>
+<polyline points="909.00,173.00 909.00,230.00" fill="none" stroke="#A76000" stroke-width="1.2" stroke-dasharray="5 3"/>
+<polyline points="906.23,224.68 909.00,230.00 911.77,224.68" fill="none" stroke="#A76000" stroke-width="1.2"/>
+<circle cx="909" cy="173" r="2.6" fill="#A76000" stroke="#A76000"/>
+<text x="916.00" y="220.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="start">VIN [?]</text>
+<text x="910.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">22 TX</text>
+<text x="970.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">23 RX</text>
+<text x="1030.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">3.3 V</text>
+<text x="1090.00" y="322.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">GND</text>
+<rect x="893" y="385" width="229" height="80" rx="4" stroke="#00817D" fill="#EDF9F7"/>
+<text x="1007.50" y="427.00" font-size="10" fill="#00817D" font-weight="bold" text-anchor="middle">3.3 V CAN transceiver [U]</text>
+<text x="1007.50" y="445.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">SN65HVD230-type: verify chip [Q01]</text>
+<text x="910.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">TXD / D</text>
+<text x="970.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">RXD / R</text>
+<text x="1030.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">VCC</text>
+<text x="1090.00" y="401.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="middle">GND</text>
+<polyline points="910.00,335.00 910.00,385.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="907.23,379.68 910.00,385.00 912.77,379.68" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="970.00,385.00 970.00,335.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="972.77,340.32 970.00,335.00 967.23,340.32" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="1030.00,335.00 1030.00,385.00" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="1027.23,379.68 1030.00,385.00 1032.77,379.68" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="1090.00,335.00 1090.00,385.00" fill="none" stroke="#697786" stroke-width="1.5"/>
+<text x="960.00" y="459.00" font-size="9" fill="#00817D" font-weight="bold" text-anchor="middle">H</text>
+<text x="1044.00" y="459.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="middle">L</text>
+<polyline points="960.00,465.00 960.00,535.00" fill="none" stroke="#00817D" stroke-width="1.8"/>
+<circle cx="960" cy="535" r="2.6" fill="#00817D" stroke="#00817D"/>
+<polyline points="1044.00,465.00 1044.00,528.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<path d="M1044,528 C1053,528 1053,542 1044,542" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<polyline points="1044.00,542.00 1044.00,575.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<circle cx="1044" cy="575" r="2.6" fill="#315BA3" stroke="#315BA3"/>
+<polyline points="1135.00,295.00 1145.00,295.00 1145.00,518.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="1127.00" y="307.00" font-size="7.5" fill="#697786" font-weight="normal" text-anchor="end">GND</text>
+<polyline points="1145.00,518.00 1145.00,528.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<path d="M1145,528 C1154,528 1154,542 1145,542" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="1145.00,542.00 1145.00,568.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<path d="M1145,568 C1154,568 1154,582 1145,582" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="1145.00,582.00 1145.00,640.00" fill="none" stroke="#697786" stroke-width="1.2" stroke-dasharray="5 3"/>
+<circle cx="1145" cy="640" r="2.6" fill="#697786" stroke="#697786"/>
+<polyline points="65.00,535.00 1125.00,535.00" fill="none" stroke="#00817D" stroke-width="2.4"/>
+<polyline points="65.00,575.00 1125.00,575.00" fill="none" stroke="#315BA3" stroke-width="2.4"/>
+<polyline points="65.00,640.00 1145.00,640.00" fill="none" stroke="#697786" stroke-width="1.4" stroke-dasharray="5 3"/>
+<text x="36.00" y="522.00" font-size="9" fill="#00817D" font-weight="bold" text-anchor="start">CAN-H [U]</text>
+<text x="36.00" y="598.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="start">CAN-L [U]</text>
+<text x="65.00" y="615.00" font-size="9" fill="#315BA3" font-weight="normal" text-anchor="start">CAN1 / 250 kbit/s [R and live diagnostic]</text>
+<text x="65.00" y="662.00" font-size="9" fill="#697786" font-weight="normal" text-anchor="start">COMMON LOGIC GND [R] - reference for all four CAN modules / Teensys; verify continuity [Q03]</text>
+<polyline points="75.00,535.00 75.00,544.00" fill="none" stroke="#A76000" stroke-width="1.6"/>
+<polyline points="75.00,544.00 80.00,547.14 70.00,550.29 80.00,553.43 70.00,556.57 80.00,559.71 70.00,562.86 75.00,566.00" fill="none" stroke="#A76000" stroke-width="1.6"/>
+<polyline points="75.00,566.00 75.00,575.00" fill="none" stroke="#A76000" stroke-width="1.6"/>
+<circle cx="75" cy="535" r="2.6" fill="#00817D" stroke="#00817D"/>
+<circle cx="75" cy="575" r="2.6" fill="#315BA3" stroke="#315BA3"/>
+<text x="87.00" y="558.00" font-size="9" fill="#A76000" font-weight="bold" text-anchor="start">R1: 120 ohm</text>
+<polyline points="1125.00,535.00 1125.00,544.00" fill="none" stroke="#A76000" stroke-width="1.6"/>
+<polyline points="1125.00,544.00 1130.00,547.14 1120.00,550.29 1130.00,553.43 1120.00,556.57 1130.00,559.71 1120.00,562.86 1125.00,566.00" fill="none" stroke="#A76000" stroke-width="1.6"/>
+<polyline points="1125.00,566.00 1125.00,575.00" fill="none" stroke="#A76000" stroke-width="1.6"/>
+<circle cx="1125" cy="535" r="2.6" fill="#00817D" stroke="#00817D"/>
+<circle cx="1125" cy="575" r="2.6" fill="#315BA3" stroke="#315BA3"/>
+<text x="1113.00" y="558.00" font-size="9" fill="#A76000" font-weight="bold" text-anchor="end">R2: 120 ohm</text>
+<text x="410.00" y="612.00" font-size="9" fill="#A76000" font-weight="bold" text-anchor="middle">MASTER: no terminator</text>
+<text x="735.00" y="612.00" font-size="9" fill="#A76000" font-weight="bold" text-anchor="middle">STEERING: no terminator</text>
+<rect x="36" y="686" width="544" height="80" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="50.00" y="709.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">Q02 / Termination needs physical verification</text>
+<text x="50.00" y="724.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">Two 120-ohm resistors only: acceleration end and brake end. Count module jumpers. Expect about 60 ohms H-L with ALL power</text>
+<text x="50.00" y="736.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">and USB off. Earlier reported measurement: about 30 ohms.</text>
+<rect x="610" y="686" width="544" height="80" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="624.00" y="709.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">Brake-end condition / reported disconnected Teensy</text>
+<text x="624.00" y="724.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">Brake CAN module is still on H/L [U], so it remains the cable end. Its terminator still counts with the Teensy unplugged. If the</text>
+<text x="624.00" y="736.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">entire brake cable is removed, steering becomes the new terminated end.</text>
+<polyline points="36.00,787.00 1154.55,787.00" fill="none" stroke="#CDD7E0" stroke-width="1"/>
+<text x="36.00" y="804.00" font-size="8" fill="#697786" font-weight="normal" text-anchor="start">Basis: calebhylkema/car2_ws pin map + current session reports/tests. Reference repo does not override these pins.</text>
+<text x="36.00" y="819.00" font-size="8" fill="#697786" font-weight="normal" text-anchor="start">Review draft: [?] details are incomplete. Diagram colors do not specify vehicle wire colors. Junction dots indicate connections.</text>
+<text x="1154.55" y="819.00" font-size="8" fill="#163047" font-weight="bold" text-anchor="end">CAR2 / r01 / SHEET 1 OF 3</text>
+</svg>

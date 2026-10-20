@@ -1,0 +1,52 @@
+{
+  "steeringUsbSerial": "20369970",
+  "firmware": "STEER_LIMIT_TEST_V3",
+  "coordinateFrame": "Commanded motor pulses from the V3 boot position, not straight center",
+  "latestObservedTestPosition": -5750,
+  "latestStatusLog": "limit-test-20261020-043714Z.json",
+  "rightBoundary": {
+    "steps": 4250,
+    "kind": "operator_selected",
+    "operatorStatement": "where we stopped is good enough",
+    "physicalSwitchReached": false,
+    "physicalLeftSwitchPin": 18,
+    "switch17Pressed": false,
+    "switch18Pressed": false,
+    "statusLog": "limit-test-20261020-042610Z.json"
+  },
+  "leftBoundary": {
+    "steps": -14000,
+    "kind": "operator_selected",
+    "operatorStatement": "Save this as the left boundary",
+    "physicalSwitchReached": false,
+    "physicalRightSwitchPin": 17,
+    "switch17Pressed": false,
+    "switch18Pressed": false,
+    "statusLog": "limit-test-20261020-043613Z.json"
+  },
+  "straightCenter": {
+    "steps": -5750,
+    "kind": "operator_reported_center",
+    "returnedAndPhysicallyConfirmedStraight": true,
+    "returnConfirmation": "Yes, straight",
+    "operatorStatement": "moved to center and stopped",
+    "statusLog": "limit-test-20261020-042951Z.json",
+    "encoderDerived": false,
+    "alignmentPrecisionIndependentlyMeasured": false,
+    "rightwardStepsToChosenBoundary": 10000,
+    "leftwardStepsToChosenBoundary": 8250
+  },
+  "centerRelativeLimits": {
+    "left": -8250,
+    "center": 0,
+    "right": 10000
+  },
+  "degreesPerPulse": null,
+  "absoluteSensorValid": false,
+  "motorMovingAtRecord": false,
+  "motorArmedAtRecord": false,
+  "savedOnPcOnly": true,
+  "operationalSoftLimitsInstalled": true,
+  "usableAfterBoardResetWithoutReference": false,
+  "currentOperationalReference": "New boot is unreferenced; Z required while physically straight and in E-stop"
+}

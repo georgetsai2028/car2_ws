@@ -1,0 +1,9 @@
+{
+  "uploadedUtc": "2026-10-20T05:01:04.9501579Z",
+  "serial": "20369970",
+  "port": "COM5",
+  "image": "outputs/car2-steering-calibration/steering-operational-limits-r01.hex",
+  "sha256": "5250a929e681813abb43ed1f825f00ee735a24a9553de68cd74ab8dd7b4e22f2",
+  "operational": true,
+  "motionSent": false
+}

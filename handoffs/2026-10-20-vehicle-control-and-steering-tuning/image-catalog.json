@@ -1,0 +1,44 @@
+{
+  "master": {
+    "role": "master",
+    "kind": "operational",
+    "path": "outputs/car2-vehicle-firmware-r02/master.hex",
+    "buildEnvironment": "master",
+    "sha256": "a9483dfb77652b47c89e35b5599dd5eefd61308f170876ca159755558cf111d7"
+  },
+  "throttle": {
+    "role": "throttle",
+    "kind": "operational",
+    "path": "outputs/car2-vehicle-firmware-r02/throttle.hex",
+    "buildEnvironment": "throttle",
+    "sha256": "ea18d86ca95fa3caff99500464384e6bc28f806d2e2b8936ce1b96c2123940a4"
+  },
+  "brake": {
+    "role": "brake",
+    "kind": "operational",
+    "path": "outputs/car2-vehicle-firmware-r02/brake.hex",
+    "buildEnvironment": "brake",
+    "sha256": "ae5a0ea1fbd8c7e850663dd09a8833f8b0e817e7692c3577541ae3b110fce621"
+  },
+  "steering": {
+    "role": "steering",
+    "kind": "operational",
+    "path": "outputs/car2-steering-calibration/steering-operational-limits-r01.hex",
+    "buildEnvironment": "steer",
+    "sha256": "5250a929e681813abb43ed1f825f00ee735a24a9553de68cd74ab8dd7b4e22f2"
+  },
+  "sensor": {
+    "role": "steering",
+    "kind": "temporary-diagnostic",
+    "path": "outputs/car2-steering-calibration/steer-sensor-test-v1.hex",
+    "buildEnvironment": "steer_sensor_test",
+    "sha256": "f7ae2a32d04af728e64a8cf594d28eac031bead05a30fac433a5f6b6682d6d7d"
+  },
+  "throttle-usb": {
+    "role": "throttle",
+    "kind": "temporary-diagnostic",
+    "path": "outputs/car2-acceleration-usb-test/throttle-usb-test.hex",
+    "buildEnvironment": "throttle_usb_test",
+    "sha256": "c60335bf1476b8f90b8082374a32f3a900145352dd8a1edfb468a82acd2080c7"
+  }
+}

@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190.55pt" height="841.89pt" viewBox="0 0 1190.55 841.89">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect x="36" y="28" width="7" height="47" rx="0" stroke="#00817D" fill="#00817D"/>
+<text x="55.00" y="48.00" font-size="22" fill="#163047" font-weight="bold" text-anchor="start">Car2 / Actuator control and feedback wiring</text>
+<text x="55.00" y="70.00" font-size="10.5" fill="#697786" font-weight="normal" text-anchor="start">Pin numbers follow the Caleb repository. They describe intended wiring, not a completed continuity audit.</text>
+<text x="1154.55" y="45.00" font-size="10" fill="#A76000" font-weight="bold" text-anchor="end">DRAFT r01 / REVIEW</text>
+<polyline points="36.00,86.00 1154.55,86.00" fill="none" stroke="#CDD7E0" stroke-width="1"/>
+<text x="36.00" y="108.00" font-size="9" fill="#00817D" font-weight="bold" text-anchor="start">[U] user report or live observation</text>
+<text x="277.00" y="108.00" font-size="9" fill="#315BA3" font-weight="bold" text-anchor="start">[R] repository / intended wiring</text>
+<text x="526.00" y="108.00" font-size="9" fill="#A76000" font-weight="bold" text-anchor="start">[?] needs confirmation</text>
+<text x="1154.55" y="108.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="end">Dashed amber = unverified detail</text>
+<rect x="36" y="133" width="544" height="298" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="50.00" y="156.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">ACCELERATION / THROTTLE [R]</text>
+<rect x="52" y="174" width="125" height="213" rx="4" stroke="#315BA3" fill="white"/>
+<text x="114.50" y="195.00" font-size="10" fill="#315BA3" font-weight="bold" text-anchor="middle">THROTTLE Teensy</text>
+<text x="64.00" y="219.00" font-size="9.5" fill="#163047" font-weight="bold" text-anchor="start">18 / SDA</text>
+<text x="64.00" y="246.00" font-size="9.5" fill="#163047" font-weight="bold" text-anchor="start">19 / SCL</text>
+<text x="64.00" y="287.00" font-size="9.5" fill="#163047" font-weight="bold" text-anchor="start">33 / GEAR_B</text>
+<text x="64.00" y="316.00" font-size="9.5" fill="#163047" font-weight="bold" text-anchor="start">34 / GEAR_C</text>
+<text x="64.00" y="345.00" font-size="9.5" fill="#163047" font-weight="bold" text-anchor="start">35 / GEAR_D</text>
+<text x="64.00" y="371.00" font-size="8" fill="#163047" font-weight="normal" text-anchor="start">2 / ENC_A, 3 / ENC_B</text>
+<rect x="233" y="187" width="121" height="78" rx="4" stroke="#00817D" fill="white"/>
+<text x="293.50" y="207.00" font-size="10" fill="#00817D" font-weight="bold" text-anchor="middle">MCP4725 DAC [R]</text>
+<text x="242.00" y="224.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">SDA</text>
+<text x="242.00" y="251.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">SCL</text>
+<polyline points="177.00,216.00 233.00,216.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="227.68,218.77 233.00,216.00 227.68,213.23" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="177.00,243.00 233.00,243.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="227.68,245.77 233.00,243.00 227.68,240.23" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<text x="293.00" y="278.00" font-size="8" fill="#315BA3" font-weight="normal" text-anchor="middle">0x62 / fallback 0x60 [R]</text>
+<text x="293.00" y="181.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="middle">VCC 3.3 V? / GND [Q08]</text>
+<rect x="410" y="187" width="153" height="200" rx="4" stroke="#315BA3" fill="white"/>
+<text x="486.50" y="207.00" font-size="11" fill="#163047" font-weight="bold" text-anchor="middle">Votol EM70 [R]</text>
+<text x="422.00" y="227.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">Throttle input [?]</text>
+<polyline points="354.00,222.00 410.00,222.00" fill="none" stroke="#00817D" stroke-width="1.8"/>
+<polyline points="404.68,224.77 410.00,222.00 404.68,219.23" fill="none" stroke="#00817D" stroke-width="1.8"/>
+<text x="381.00" y="213.00" font-size="7.5" fill="#00817D" font-weight="normal" text-anchor="middle">DAC OUT</text>
+<polyline points="177.00,284.00 410.00,284.00" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<polyline points="404.68,286.77 410.00,284.00 404.68,281.23" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<text x="422.00" y="287.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">Mode B terminal ?</text>
+<polyline points="177.00,313.00 410.00,313.00" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<polyline points="404.68,315.77 410.00,313.00 404.68,310.23" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<text x="422.00" y="316.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">Mode C terminal ?</text>
+<polyline points="177.00,342.00 410.00,342.00" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<polyline points="404.68,344.77 410.00,342.00 404.68,339.23" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<text x="422.00" y="345.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">Mode D terminal ?</text>
+<text x="422.00" y="371.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="start">Input ground / levels: Q08</text>
+<text x="52.00" y="407.00" font-size="8.8" fill="#163047" font-weight="normal" text-anchor="start">[R] DAC idle 0.80 V; maximum 3.30 V. LPD3806 encoder: A -&gt; pin 2, B -&gt; pin 3; encoder supply/conditioning needs confirmation</text>
+<text x="52.00" y="419.00" font-size="8.8" fill="#163047" font-weight="normal" text-anchor="start">[Q10].</text>
+<rect x="610" y="133" width="544" height="470" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="624.00" y="156.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">STEERING [R/U]</text>
+<rect x="628" y="174" width="140" height="210" rx="4" stroke="#315BA3" fill="white"/>
+<text x="698.00" y="195.00" font-size="10" fill="#315BA3" font-weight="bold" text-anchor="middle">STEERING Teensy</text>
+<text x="640.00" y="219.00" font-size="10" fill="#163047" font-weight="bold" text-anchor="start">15 / STEP</text>
+<text x="640.00" y="254.00" font-size="10" fill="#163047" font-weight="bold" text-anchor="start">16 / DIR</text>
+<text x="640.00" y="288.00" font-size="10" fill="#163047" font-weight="bold" text-anchor="start">A0 / pin 14</text>
+<text x="640.00" y="335.00" font-size="10" fill="#163047" font-weight="bold" text-anchor="start">17 / LIMIT_A</text>
+<text x="640.00" y="365.00" font-size="10" fill="#163047" font-weight="bold" text-anchor="start">18 / LIMIT_B</text>
+<rect x="800" y="181" width="121" height="85" rx="3" stroke="#A76000" fill="#FFF9ED" stroke-dasharray="5 3"/>
+<text x="860.50" y="197.00" font-size="8" fill="#A76000" font-weight="bold" text-anchor="middle">INPUT DETAIL [Q05]</text>
+<text x="860.50" y="233.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="middle">PUL / DIR polarity,</text>
+<text x="860.50" y="263.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="middle">voltage / interface ?</text>
+<rect x="945" y="174" width="188" height="161" rx="4" stroke="#315BA3" fill="white"/>
+<text x="1039.00" y="195.00" font-size="11" fill="#163047" font-weight="bold" text-anchor="middle">CL57T driver [R/U]</text>
+<text x="958.00" y="220.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">PUL+ / PUL- pair ?</text>
+<text x="958.00" y="255.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">DIR+ / DIR- pair ?</text>
+<text x="958.00" y="289.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">Encoder connector ?</text>
+<text x="958.00" y="321.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">ENA wiring ? [Q05]</text>
+<polyline points="768.00,216.00 945.00,216.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="939.68,218.77 945.00,216.00 939.68,213.23" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="768.00,251.00 945.00,251.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="939.68,253.77 945.00,251.00 939.68,248.23" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<text x="640.00" y="380.00" font-size="8" fill="#315BA3" font-weight="normal" text-anchor="start">20 / ENA unused [R]</text>
+<rect x="805" y="420" width="123" height="75" rx="4" stroke="#A76000" fill="#FFF9ED" stroke-dasharray="5 3"/>
+<text x="866.50" y="439.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">A0 position sensor [?]</text>
+<text x="866.50" y="456.00" font-size="8.5" fill="#A76000" font-weight="bold" text-anchor="middle">Failure identity ?</text>
+<text x="866.50" y="474.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="middle">Sensor / supply /</text>
+<text x="866.50" y="486.00" font-size="8" fill="#A76000" font-weight="normal" text-anchor="middle">condition: Q10</text>
+<polyline points="835.00,420.00 835.00,285.00 768.00,285.00" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<polyline points="773.32,282.23 768.00,285.00 773.32,287.77" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<text x="844.00" y="304.00" font-size="7.8" fill="#315BA3" font-weight="normal" text-anchor="start">STEER_POS</text>
+<rect x="640" y="436" width="130" height="112" rx="4" stroke="#00817D" fill="white"/>
+<text x="705.00" y="453.00" font-size="8.5" fill="#00817D" font-weight="bold" text-anchor="middle">NC limit contacts [U]</text>
+<polyline points="628.00,332.00 618.00,332.00 618.00,480.00 640.00,480.00" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<polyline points="628.00,362.00 623.00,362.00 623.00,515.00 640.00,515.00" fill="none" stroke="#315BA3" stroke-width="1.3"/>
+<text x="648.00" y="472.00" font-size="8" fill="#315BA3" font-weight="normal" text-anchor="start">GPIO17</text>
+<circle cx="682" cy="480" r="2" fill="#697786" stroke="#697786"/>
+<circle cx="716" cy="480" r="2" fill="#697786" stroke="#697786"/>
+<polyline points="640.00,480.00 682.00,480.00 716.00,480.00 755.00,480.00" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="696.00,468.00 696.00,475.00" fill="none" stroke="#697786" stroke-width="1"/>
+<text x="648.00" y="507.00" font-size="8" fill="#315BA3" font-weight="normal" text-anchor="start">GPIO18</text>
+<circle cx="682" cy="515" r="2" fill="#697786" stroke="#697786"/>
+<circle cx="716" cy="515" r="2" fill="#697786" stroke="#697786"/>
+<polyline points="640.00,515.00 682.00,515.00 716.00,515.00 755.00,515.00" fill="none" stroke="#697786" stroke-width="1.2"/>
+<polyline points="696.00,503.00 696.00,510.00" fill="none" stroke="#697786" stroke-width="1"/>
+<polyline points="755.00,480.00 755.00,538.00 716.00,538.00" fill="none" stroke="#697786" stroke-width="1.2"/>
+<text x="710.00" y="542.00" font-size="8" fill="#697786" font-weight="normal" text-anchor="end">GND</text>
+<rect x="958" y="402" width="175" height="92" rx="4" stroke="#315BA3" fill="white"/>
+<text x="1045.50" y="425.00" font-size="10" fill="#163047" font-weight="bold" text-anchor="middle">Steering stepper [R/U]</text>
+<text x="1045.50" y="445.00" font-size="8.5" fill="#315BA3" font-weight="normal" text-anchor="middle">23HS30-5004D-E1000 [R]</text>
+<text x="1045.50" y="465.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">Motor encoder loom [?]</text>
+<text x="1045.50" y="482.00" font-size="8.5" fill="#697786" font-weight="normal" text-anchor="middle">Separate from A0 sensor</text>
+<polyline points="978.00,335.00 978.00,402.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<polyline points="994.00,335.00 994.00,402.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<polyline points="1010.00,335.00 1010.00,402.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<polyline points="1026.00,335.00 1026.00,402.00" fill="none" stroke="#315BA3" stroke-width="1.2"/>
+<text x="1041.00" y="360.00" font-size="8" fill="#315BA3" font-weight="normal" text-anchor="start">Motor phases [R]</text>
+<polyline points="1133.00,458.00 1142.00,458.00 1142.00,286.00 1133.00,286.00" fill="none" stroke="#A76000" stroke-width="1.2" stroke-dasharray="5 3"/>
+<polyline points="1138.32,283.23 1133.00,286.00 1138.32,288.77" fill="none" stroke="#A76000" stroke-width="1.2"/>
+<rect x="958" y="532" width="175" height="47" rx="4" stroke="#315BA3" fill="white"/>
+<polyline points="1046.00,494.00 1046.00,532.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="1043.23,526.68 1046.00,532.00 1048.77,526.68" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<text x="1045.50" y="550.00" font-size="9.5" fill="#163047" font-weight="bold" text-anchor="middle">20:1 gearbox [R]</text>
+<text x="1045.50" y="568.00" font-size="9" fill="#00817D" font-weight="normal" text-anchor="middle">to rack / wheels [U]</text>
+<text x="625.00" y="576.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">[Q06] Which contact is reached in each steering travel direction is still unverified.</text>
+<text x="625.00" y="588.00" font-size="8.5" fill="#163047" font-weight="normal" text-anchor="start">See observed pin/location mismatch below.</text>
+<rect x="36" y="454" width="544" height="311" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="50.00" y="477.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">BRAKE / LINEAR ACTUATOR [R/U]</text>
+<rect x="52" y="493" width="125" height="184" rx="4" stroke="#315BA3" fill="white"/>
+<text x="114.50" y="515.00" font-size="10" fill="#315BA3" font-weight="bold" text-anchor="middle">BRAKE Teensy</text>
+<text x="64.00" y="548.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="start">18 / APPLY PWM</text>
+<text x="64.00" y="583.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="start">19 / RELEASE PWM</text>
+<text x="64.00" y="634.00" font-size="10" fill="#163047" font-weight="bold" text-anchor="start">A0 / pin 14</text>
+<rect x="237" y="493" width="149" height="176" rx="4" stroke="#315BA3" fill="white"/>
+<text x="311.50" y="515.00" font-size="10" fill="#163047" font-weight="bold" text-anchor="middle">IBT-2 H-bridge [R]</text>
+<text x="249.00" y="548.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">APPLY input ?</text>
+<text x="249.00" y="583.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="start">RELEASE input ?</text>
+<text x="249.00" y="613.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="start">RPWM / LPWM map ?</text>
+<text x="249.00" y="634.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="start">R_EN / L_EN / VCC ?</text>
+<text x="249.00" y="655.00" font-size="8.5" fill="#A76000" font-weight="bold" text-anchor="start">All details: Q07</text>
+<polyline points="177.00,545.00 237.00,545.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="231.68,547.77 237.00,545.00 231.68,542.23" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="177.00,580.00 237.00,580.00" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<polyline points="231.68,582.77 237.00,580.00 231.68,577.23" fill="none" stroke="#315BA3" stroke-width="1.5"/>
+<rect x="432" y="493" width="132" height="176" rx="4" stroke="#315BA3" fill="white"/>
+<text x="498.00" y="514.00" font-size="9.5" fill="#163047" font-weight="bold" text-anchor="middle">Linear actuator [U]</text>
+<text x="498.00" y="538.00" font-size="9" fill="#A76000" font-weight="normal" text-anchor="middle">Motor pair [?]</text>
+<polyline points="386.00,535.00 432.00,535.00" fill="none" stroke="#B64545" stroke-width="1.5"/>
+<polyline points="386.00,560.00 432.00,560.00" fill="none" stroke="#697786" stroke-width="1.5"/>
+<text x="498.00" y="583.00" font-size="9" fill="#315BA3" font-weight="normal" text-anchor="middle">TS-LD-HS [R]</text>
+<text x="498.00" y="601.00" font-size="9" fill="#315BA3" font-weight="normal" text-anchor="middle">12 V / 50 mm [R]</text>
+<text x="498.00" y="624.00" font-size="9" fill="#163047" font-weight="bold" text-anchor="middle">Feedback pot</text>
+<text x="498.00" y="642.00" font-size="8.5" fill="#315BA3" font-weight="normal" text-anchor="middle">~10 kohm [R]</text>
+<text x="498.00" y="658.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">Wire identities ?</text>
+<polyline points="498.00,669.00 498.00,699.00 207.00,699.00 207.00,631.00 177.00,631.00" fill="none" stroke="#315BA3" stroke-width="1.4"/>
+<polyline points="182.32,628.23 177.00,631.00 182.32,633.77" fill="none" stroke="#315BA3" stroke-width="1.4"/>
+<text x="318.00" y="692.00" font-size="8.5" fill="#A76000" font-weight="normal" text-anchor="middle">POT WIPER / conditioning ? [Q07]</text>
+<text x="52.00" y="727.00" font-size="8.8" fill="#163047" font-weight="normal" text-anchor="start">[R] Position feedback decreases while applying. Firmware ADC targets: 945 released, 755 applied (745 mechanical limit). Pot</text>
+<text x="52.00" y="739.00" font-size="8.8" fill="#163047" font-weight="normal" text-anchor="start">supply and pin scaling require verification.</text>
+<rect x="610" y="622" width="544" height="143" rx="5" stroke="#CDD7E0" fill="#F5F8FB"/>
+<text x="624.00" y="645.00" font-size="12" fill="#163047" font-weight="bold" text-anchor="start">Q06 / Steering switch observations - do not assume side = travel</text>
+<text x="626.00" y="659.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">GPIO17: firmware calls LEFT; manually holding the right-side switch activated this pin [U].</text>
+<text x="626.00" y="673.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">GPIO18: firmware calls RIGHT; manually holding the left-side switch activated this pin [U].</text>
+<text x="626.00" y="687.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">Released = LOW; pressed = HIGH [U]. Actual mechanical travel direction must be checked before using either contact as a</text>
+<text x="626.00" y="701.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">directional stop.</text>
+<text x="626.00" y="715.00" font-size="9" fill="#163047" font-weight="normal" text-anchor="start">Q10: a failed steering encoder is reported; A0 sensor vs motor-encoder identity is unconfirmed.</text>
+<polyline points="36.00,787.00 1154.55,787.00" fill="none" stroke="#CDD7E0" stroke-width="1"/>
+<text x="36.00" y="804.00" font-size="8" fill="#697786" font-weight="normal" text-anchor="start">Basis: calebhylkema/car2_ws pin map + current session reports/tests. Reference repo does not override these pins.</text>
+<text x="36.00" y="819.00" font-size="8" fill="#697786" font-weight="normal" text-anchor="start">Review draft: [?] details are incomplete. Diagram colors do not specify vehicle wire colors. Junction dots indicate connections.</text>
+<text x="1154.55" y="819.00" font-size="8" fill="#163047" font-weight="bold" text-anchor="end">CAR2 / r01 / SHEET 2 OF 3</text>
+</svg>

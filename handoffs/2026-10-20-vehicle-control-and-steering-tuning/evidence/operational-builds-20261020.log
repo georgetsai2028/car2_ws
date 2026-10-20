@@ -1,0 +1,676 @@
+Processing master (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 96 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit MCP4725 @ 2.0.2
+|-- Adafruit BusIO @ 1.17.4
+|-- AccelStepper @ 1.64.0
+|-- Encoder @ 1.4.4
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\master\src\master.cpp.o
+Compiling .pio\build\master\lib524\Wire\Wire.cpp.o
+Compiling .pio\build\master\lib524\Wire\WireIMXRT.cpp.o
+Compiling .pio\build\master\lib524\Wire\WireKinetis.cpp.o
+Compiling .pio\build\master\lib524\Wire\utility\twi.c.o
+Compiling .pio\build\master\lib5f4\SPI\SPI.cpp.o
+Compiling .pio\build\master\libd84\Adafruit BusIO\Adafruit_BusIO_Register.cpp.o
+Compiling .pio\build\master\libd84\Adafruit BusIO\Adafruit_GenericDevice.cpp.o
+Compiling .pio\build\master\libd84\Adafruit BusIO\Adafruit_I2CDevice.cpp.o
+Compiling .pio\build\master\libd84\Adafruit BusIO\Adafruit_SPIDevice.cpp.o
+Compiling .pio\build\master\lib80f\Adafruit MCP4725\Adafruit_MCP4725.cpp.o
+Archiving .pio\build\master\lib524\libWire.a
+Compiling .pio\build\master\lib4ee\AccelStepper\AccelStepper.cpp.o
+Compiling .pio\build\master\lib4ee\AccelStepper\MultiStepper.cpp.o
+Compiling .pio\build\master\lib639\Encoder\Encoder.cpp.o
+Compiling .pio\build\master\FrameworkArduino\AudioStream.cpp.o
+Archiving .pio\build\master\lib5f4\libSPI.a
+Compiling .pio\build\master\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\master\FrameworkArduino\DMAChannel.cpp.o
+Archiving .pio\build\master\lib80f\libAdafruit MCP4725.a
+Compiling .pio\build\master\FrameworkArduino\EventResponder.cpp.o
+Archiving .pio\build\master\libd84\libAdafruit BusIO.a
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial2.cpp.o
+Archiving .pio\build\master\lib4ee\libAccelStepper.a
+Archiving .pio\build\master\lib639\libEncoder.a
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\master\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\master\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\master\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\master\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\master\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\master\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\master\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\master\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\master\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\master\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\master\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\master\FrameworkArduino\analog.c.o
+Compiling .pio\build\master\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\master\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\master\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\master\FrameworkArduino\delay.c.o
+Compiling .pio\build\master\FrameworkArduino\digital.c.o
+Compiling .pio\build\master\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\master\FrameworkArduino\extmem.c.o
+Compiling .pio\build\master\FrameworkArduino\fuse.c.o
+Compiling .pio\build\master\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\master\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\master\FrameworkArduino\main.cpp.o
+Compiling .pio\build\master\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\master\FrameworkArduino\memset.S.o
+Compiling .pio\build\master\FrameworkArduino\new.cpp.o
+Compiling .pio\build\master\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\master\FrameworkArduino\pwm.c.o
+Compiling .pio\build\master\FrameworkArduino\rtc.c.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\master\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\master\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\master\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\master\FrameworkArduino\startup.c.o
+Compiling .pio\build\master\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\master\FrameworkArduino\usb.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\master\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\master\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\master\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\master\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\master\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\master\libFrameworkArduino.a
+Linking .pio\build\master\firmware.elf
+Checking size .pio\build\master\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+Calculating size .pio\build\master\firmware.elf
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:54008, data:6088, headers:8508   free for files:8057860
+teensy_size:    RAM1: variables:17664, code:51488, padding:14048   free for local variables:441088
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\master\firmware.hex
+========================= [SUCCESS] Took 17.33 seconds =========================
+
+Processing throttle (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 96 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit MCP4725 @ 2.0.2
+|-- Adafruit BusIO @ 1.17.4
+|-- AccelStepper @ 1.64.0
+|-- Encoder @ 1.4.4
+|-- Wire @ 1.0
+|-- FlexCAN_T4
+|-- SPI @ 1.0
+Building in release mode
+Compiling .pio\build\throttle\src\throttle.cpp.o
+Compiling .pio\build\throttle\lib524\Wire\Wire.cpp.o
+Compiling .pio\build\throttle\lib524\Wire\WireIMXRT.cpp.o
+Compiling .pio\build\throttle\lib524\Wire\WireKinetis.cpp.o
+Compiling .pio\build\throttle\lib524\Wire\utility\twi.c.o
+Compiling .pio\build\throttle\lib5f4\SPI\SPI.cpp.o
+Compiling .pio\build\throttle\lib672\Adafruit BusIO\Adafruit_BusIO_Register.cpp.o
+Compiling .pio\build\throttle\lib672\Adafruit BusIO\Adafruit_GenericDevice.cpp.o
+Compiling .pio\build\throttle\lib672\Adafruit BusIO\Adafruit_I2CDevice.cpp.o
+Compiling .pio\build\throttle\lib672\Adafruit BusIO\Adafruit_SPIDevice.cpp.o
+Compiling .pio\build\throttle\lib7d8\Adafruit MCP4725\Adafruit_MCP4725.cpp.o
+Compiling .pio\build\throttle\libdaa\AccelStepper\AccelStepper.cpp.o
+Archiving .pio\build\throttle\lib524\libWire.a
+Compiling .pio\build\throttle\libdaa\AccelStepper\MultiStepper.cpp.o
+Compiling .pio\build\throttle\libb2f\Encoder\Encoder.cpp.o
+Archiving .pio\build\throttle\lib5f4\libSPI.a
+Compiling .pio\build\throttle\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\CrashReport.cpp.o
+Archiving .pio\build\throttle\lib672\libAdafruit BusIO.a
+Archiving .pio\build\throttle\lib7d8\libAdafruit MCP4725.a
+Compiling .pio\build\throttle\FrameworkArduino\DMAChannel.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\EventResponder.cpp.o
+Archiving .pio\build\throttle\libb2f\libEncoder.a
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial1.cpp.o
+Archiving .pio\build\throttle\libdaa\libAccelStepper.a
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\analog.c.o
+Compiling .pio\build\throttle\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\throttle\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\throttle\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\throttle\FrameworkArduino\delay.c.o
+Compiling .pio\build\throttle\FrameworkArduino\digital.c.o
+Compiling .pio\build\throttle\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\throttle\FrameworkArduino\extmem.c.o
+Compiling .pio\build\throttle\FrameworkArduino\fuse.c.o
+Compiling .pio\build\throttle\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\throttle\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\throttle\FrameworkArduino\main.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\throttle\FrameworkArduino\memset.S.o
+Compiling .pio\build\throttle\FrameworkArduino\new.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\throttle\FrameworkArduino\pwm.c.o
+Compiling .pio\build\throttle\FrameworkArduino\rtc.c.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\throttle\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\throttle\FrameworkArduino\startup.c.o
+Compiling .pio\build\throttle\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\throttle\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\throttle\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\throttle\libFrameworkArduino.a
+Linking .pio\build\throttle\firmware.elf
+Checking size .pio\build\throttle\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+Calculating size .pio\build\throttle\firmware.elf
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:32728, data:6328, headers:9068   free for files:8078340
+teensy_size:    RAM1: variables:17760, code:29824, padding:2944   free for local variables:473760
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\throttle\firmware.hex
+========================= [SUCCESS] Took 17.07 seconds =========================
+
+Processing steer (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 96 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit MCP4725 @ 2.0.2
+|-- Adafruit BusIO @ 1.17.4
+|-- AccelStepper @ 1.64.0
+|-- Encoder @ 1.4.4
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\steer\src\steer.cpp.o
+Compiling .pio\build\steer\lib524\Wire\Wire.cpp.o
+Compiling .pio\build\steer\lib524\Wire\WireIMXRT.cpp.o
+Compiling .pio\build\steer\lib524\Wire\WireKinetis.cpp.o
+Compiling .pio\build\steer\lib524\Wire\utility\twi.c.o
+Compiling .pio\build\steer\lib5f4\SPI\SPI.cpp.o
+Compiling .pio\build\steer\libd9e\Adafruit BusIO\Adafruit_BusIO_Register.cpp.o
+Compiling .pio\build\steer\libd9e\Adafruit BusIO\Adafruit_GenericDevice.cpp.o
+Compiling .pio\build\steer\libd9e\Adafruit BusIO\Adafruit_I2CDevice.cpp.o
+Compiling .pio\build\steer\libd9e\Adafruit BusIO\Adafruit_SPIDevice.cpp.o
+Compiling .pio\build\steer\libaf3\Adafruit MCP4725\Adafruit_MCP4725.cpp.o
+Archiving .pio\build\steer\lib524\libWire.a
+Compiling .pio\build\steer\libd99\AccelStepper\AccelStepper.cpp.o
+Compiling .pio\build\steer\libd99\AccelStepper\MultiStepper.cpp.o
+Archiving .pio\build\steer\lib5f4\libSPI.a
+Compiling .pio\build\steer\lib343\Encoder\Encoder.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\DMAChannel.cpp.o
+Archiving .pio\build\steer\libaf3\libAdafruit MCP4725.a
+Archiving .pio\build\steer\libd9e\libAdafruit BusIO.a
+Compiling .pio\build\steer\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial2.cpp.o
+Archiving .pio\build\steer\libd99\libAccelStepper.a
+Archiving .pio\build\steer\lib343\libEncoder.a
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\analog.c.o
+Compiling .pio\build\steer\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\steer\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\steer\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\steer\FrameworkArduino\delay.c.o
+Compiling .pio\build\steer\FrameworkArduino\digital.c.o
+Compiling .pio\build\steer\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\steer\FrameworkArduino\extmem.c.o
+Compiling .pio\build\steer\FrameworkArduino\fuse.c.o
+Compiling .pio\build\steer\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\steer\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\steer\FrameworkArduino\main.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\steer\FrameworkArduino\memset.S.o
+Compiling .pio\build\steer\FrameworkArduino\new.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\steer\FrameworkArduino\pwm.c.o
+Compiling .pio\build\steer\FrameworkArduino\rtc.c.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\steer\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\steer\FrameworkArduino\startup.c.o
+Compiling .pio\build\steer\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\steer\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\steer\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\steer\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\steer\libFrameworkArduino.a
+Linking .pio\build\steer\firmware.elf
+Calculating size .pio\build\steer\firmware.elf
+Checking size .pio\build\steer\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:22304, data:5064, headers:8468   free for files:8090628
+teensy_size:    RAM1: variables:16928, code:19784, padding:12984   free for local variables:474592
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\steer\firmware.hex
+========================= [SUCCESS] Took 17.14 seconds =========================
+
+Processing brake (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 96 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit MCP4725 @ 2.0.2
+|-- Adafruit BusIO @ 1.17.4
+|-- AccelStepper @ 1.64.0
+|-- Encoder @ 1.4.4
+|-- FlexCAN_T4
+Building in release mode
+Compiling .pio\build\brake\src\brake.cpp.o
+Compiling .pio\build\brake\lib524\Wire\Wire.cpp.o
+Compiling .pio\build\brake\lib524\Wire\WireIMXRT.cpp.o
+Compiling .pio\build\brake\lib524\Wire\WireKinetis.cpp.o
+Compiling .pio\build\brake\lib524\Wire\utility\twi.c.o
+Compiling .pio\build\brake\lib5f4\SPI\SPI.cpp.o
+Compiling .pio\build\brake\libe50\Adafruit BusIO\Adafruit_BusIO_Register.cpp.o
+Compiling .pio\build\brake\libe50\Adafruit BusIO\Adafruit_GenericDevice.cpp.o
+Compiling .pio\build\brake\libe50\Adafruit BusIO\Adafruit_I2CDevice.cpp.o
+Compiling .pio\build\brake\libe50\Adafruit BusIO\Adafruit_SPIDevice.cpp.o
+Compiling .pio\build\brake\lib44a\Adafruit MCP4725\Adafruit_MCP4725.cpp.o
+Compiling .pio\build\brake\lib446\AccelStepper\AccelStepper.cpp.o
+Archiving .pio\build\brake\lib524\libWire.a
+Compiling .pio\build\brake\lib446\AccelStepper\MultiStepper.cpp.o
+Archiving .pio\build\brake\lib5f4\libSPI.a
+Compiling .pio\build\brake\lib1e6\Encoder\Encoder.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\DMAChannel.cpp.o
+Archiving .pio\build\brake\libe50\libAdafruit BusIO.a
+Archiving .pio\build\brake\lib44a\libAdafruit MCP4725.a
+Compiling .pio\build\brake\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial2.cpp.o
+Archiving .pio\build\brake\lib1e6\libEncoder.a
+Archiving .pio\build\brake\lib446\libAccelStepper.a
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\analog.c.o
+Compiling .pio\build\brake\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\brake\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\brake\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\brake\FrameworkArduino\delay.c.o
+Compiling .pio\build\brake\FrameworkArduino\digital.c.o
+Compiling .pio\build\brake\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\brake\FrameworkArduino\extmem.c.o
+Compiling .pio\build\brake\FrameworkArduino\fuse.c.o
+Compiling .pio\build\brake\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\brake\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\brake\FrameworkArduino\main.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\brake\FrameworkArduino\memset.S.o
+Compiling .pio\build\brake\FrameworkArduino\new.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\brake\FrameworkArduino\pwm.c.o
+Compiling .pio\build\brake\FrameworkArduino\rtc.c.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\brake\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\brake\FrameworkArduino\startup.c.o
+Compiling .pio\build\brake\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\brake\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\brake\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\brake\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\brake\libFrameworkArduino.a
+Linking .pio\build\brake\firmware.elf
+Calculating size .pio\build\brake\firmware.elf
+Checking size .pio\build\brake\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:18856, data:4040, headers:8844   free for files:8094724
+teensy_size:    RAM1: variables:15360, code:16336, padding:16432   free for local variables:476160
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\brake\firmware.hex
+========================= [SUCCESS] Took 16.18 seconds =========================
+
+Processing brake_bench (platform: teensy@5.1.0; board: teensy41; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/teensy/teensy41.html
+PLATFORM: Teensy (5.1.0) > Teensy 4.1
+HARDWARE: IMXRT1062 600MHz, 512KB RAM, 7.75MB Flash
+DEBUG: Current (jlink) External (jlink)
+PACKAGES: 
+ - framework-arduinoteensy @ 1.160.0 (1.60) 
+ - tool-teensy @ 1.162.0 (1.62) 
+ - toolchain-gccarmnoneeabi-teensy @ 1.110301.0 (11.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 92 compatible libraries
+Scanning dependencies...
+No dependencies
+Building in release mode
+Compiling .pio\build\brake_bench\src\brake_bench_test.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\AudioStream.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\CrashReport.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\DMAChannel.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\EventResponder.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial1.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial2.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial3.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial4.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial5.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial6.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial7.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\HardwareSerial8.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\IntervalTimer.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\MTP_Storage.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\MTP_Teensy.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\Time.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\analog.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\bootdata.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\clockspeed.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\debugprintf.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\delay.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\digital.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\eeprom.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\extmem.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\fuse.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\interrupt.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\keylayouts.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\main.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\memcpy-armv7m.S.o
+Compiling .pio\build\brake_bench\FrameworkArduino\memset.S.o
+Compiling .pio\build\brake_bench\FrameworkArduino\new.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\nonstd.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\pwm.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\rtc.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent1.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent2.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent3.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent4.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent5.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent6.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent7.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEvent8.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEventUSB1.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\serialEventUSB2.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_alloc_valid.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_calloc.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_free.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_hash.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_malloc.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_malloc_stats.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_pool.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_realloc.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_realloc_i.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_realloc_move.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_szalloc.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_util.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\sm_zalloc.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\startup.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\tempmon.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_audio.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_desc.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_flightsim.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_inst.cpp.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_joystick.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_keyboard.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_midi.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_mouse.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_mtp.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_rawhid.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_seremu.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_serial.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_serial2.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_serial3.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\usb_touch.c.o
+Compiling .pio\build\brake_bench\FrameworkArduino\yield.cpp.o
+Archiving .pio\build\brake_bench\libFrameworkArduino.a
+Linking .pio\build\brake_bench\firmware.elf
+Checking size .pio\build\brake_bench\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+Calculating size .pio\build\brake_bench\firmware.elf
+teensy_size: Memory Usage on Teensy 4.1:
+teensy_size:   FLASH: code:12708, data:4040, headers:8848   free for files:8100868
+teensy_size:    RAM1: variables:4832, code:10192, padding:22576   free for local variables:486688
+teensy_size:    RAM2: variables:12416  free for malloc/new:511872
+Building .pio\build\brake_bench\firmware.hex
+========================= [SUCCESS] Took 11.96 seconds =========================
+
+Environment    Status    Duration
+-------------  --------  ------------
+master         SUCCESS   00:00:17.327
+throttle       SUCCESS   00:00:17.075
+steer          SUCCESS   00:00:17.144
+brake          SUCCESS   00:00:16.176
+brake_bench    SUCCESS   00:00:11.958
+========================= 5 succeeded in 00:01:19.679 =========================

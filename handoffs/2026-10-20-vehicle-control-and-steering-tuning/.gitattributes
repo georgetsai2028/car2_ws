@@ -1,0 +1,2 @@
+# Preserve exact archived/script bytes so SHA256 verification survives Windows checkout.
+* -text

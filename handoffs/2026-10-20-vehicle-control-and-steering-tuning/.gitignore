@@ -1,0 +1,6 @@
+.venv/
+runtime/
+.test-build/
+car2_ws/firmware/teensys/.pio/
+__pycache__/
+*.py[cod]

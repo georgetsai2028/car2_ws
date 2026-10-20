@@ -1,0 +1,63 @@
+{
+  "repository": "https://github.com/calebhylkema/car2_ws",
+  "baseCommit": "33db9dd29f628e64a7c02661b659257215678813",
+  "snapshotDatePacific": "2026-10-20",
+  "localUncommittedChangesIncludedInNewCopies": true,
+  "originalFileSha256": {
+    "car2_ws/firmware/teensys/brake.cpp": "59199577dc7f50dffa8c4004ee21a7916511c634b53a334a699eb5577f8e161f",
+    "car2_ws/firmware/teensys/brake_bench_test.cpp": "c4ad2dd9709900a04051901cce03386bba66cb7cf9116c354018c4f56563b3ac",
+    "car2_ws/firmware/teensys/can_bus_test.cpp": "0e0d319c1d441ea0ee80cd1147d8855b893bd2ec53a0d14f2170fd132305753e",
+    "car2_ws/firmware/teensys/can_link_test.cpp": "4d60e5d0710addd867bbe6f8647d0757b93ae8d35b80d3a99b6cbf46e1641b7f",
+    "car2_ws/firmware/teensys/dbw_can.h": "61a35499cdd8a270911328b05ac3523d979e8470c08b64fee81c07ba3a7eca33",
+    "car2_ws/firmware/teensys/master.cpp": "94129b0c6d337ad88825d58bcb763bf616bf9ae90ba1d33ac84de89d99882838",
+    "car2_ws/firmware/teensys/steer.cpp": "b1e86c9d46ef54f8b827b337d0a44fff795c6680e64d1610835396048e7d2c25",
+    "car2_ws/firmware/teensys/steer_limit_test.cpp": "aa7288bc386fb8586c1fb15e19f6d513e9366166b122b679d12d2545b522eec8",
+    "car2_ws/firmware/teensys/steer_sensor_test.cpp": "55377fd23d65b0b8b68de62f6562a0e52e1c8aea3f22f5f719cc3e84470adeb2",
+    "car2_ws/firmware/teensys/steer_usb_jog.cpp": "db108860017c8a89d3bf73c6f566566b121b26bc2e938acdc37064838fea44e5",
+    "car2_ws/firmware/teensys/steering_profile.h": "94b1b1d400cd69ad8e191ef6c17efc6ac9d4dba0232fd4fbe4bbc93c3c6b12e2",
+    "car2_ws/firmware/teensys/throttle.cpp": "1aa2775d504ec347281337499e2f7ffcb556fdfc4c4982ed9c019576d52a35ff",
+    "car2_ws/firmware/teensys/throttle_usb_test.cpp": "83af25609e3179d1ef44f8f62cb82060e27af6e135485210e7327576d47a79ff",
+    "car2_ws/teleop/keyboard_teleop_wasd_guarded.py": "ae624c9a3e648da0245cfa8e0d62c5e77aab0e1b9630e18a01b710f4749c8eb1",
+    "car2_ws/teleop/teensy_serial.py": "941a3f93597ec4507dc63b6b6e47bb19d7115ad082767fb23b46280f8ca8d5f4",
+    "car2_ws/teleop/check_can.py": "80cb82a3134bd517c7f45d2ac2f51faf63254432efd16c0188f7edd287f6f13b",
+    "car2_ws/tests/can_bus_regression.cpp": "6ced37a57fc7b9a2c1fe1cec3617aa78df2f41e578aaa325330bb7e66ca33e30",
+    "car2_ws/tests/can_link_regression.cpp": "7b022ab631e2915782e893e2d8e8d74faa9d475e6ea72b0c5337d188c47ab524",
+    "car2_ws/tests/can_pair_regression.cpp": "5c19ddf17492b3cfb59cd93a7b14fc99b7005d638bd79278fcd116b002921ae9",
+    "car2_ws/tests/firmware_mocks/AccelStepper.h": "fe7aa513a476a6b956446405ebf84bad38dea8ce12e16145e68b530bdbffe2ae",
+    "car2_ws/tests/firmware_mocks/Adafruit_MCP4725.h": "335a1f2ddbd69b157e4fbd620e83ee74b7579342f4bb001d092151f56f431637",
+    "car2_ws/tests/firmware_mocks/Arduino.h": "0920bffa09f5eb97567893c90dabc8bc189031a34696d945fa1ad288955a863b",
+    "car2_ws/tests/firmware_mocks/Encoder.h": "8cb1f709415d6f0b622a2a2346b34801846a6fc1115aa5a0264e6df830131dac",
+    "car2_ws/tests/firmware_mocks/FlexCAN_T4.h": "45ec62154370ee86638145e8b1f4293fc9364afdabe72766f76d64d5649baf7b",
+    "car2_ws/tests/firmware_mocks/Wire.h": "d9483d8493c2e8ede423bd1a3dbc92f88388b2959c8541861f5988d99a283060",
+    "car2_ws/tests/jog_regression.cpp": "3109296aa79e0c85a75b885c1191e6cbfe8b2c340ef44ce8dca078bdb6df85e1",
+    "car2_ws/tests/master_regression.cpp": "dfe9674151187540515346fe8be3f59b29cbbd55d612f3675c5b448e1ab5a423",
+    "car2_ws/tests/run_firmware_tests.py": "24809891a0f49ea8c533495951d059ec94801c5d82c52b223c630adc5f51bc29",
+    "car2_ws/tests/steer_limit_test_regression.cpp": "b88fabf2926907223355ef1263b1f4c23aeec8890cc2d46192435286c0877fc5",
+    "car2_ws/tests/steer_regression.cpp": "d1df477018b1ec49ecb17731862365c6256e44fc89ef66ac5c1b5dada8c8da8a",
+    "car2_ws/tests/steer_sensor_test_regression.cpp": "73bbc8f1055f8ceca40e11bb0cda623362fff15c06fd581709e3da396a3fb7e6",
+    "car2_ws/tests/steering_profile_regression.cpp": "cee29adc7e21e61873fffeed8338c977406642a6b4f8a4317bb46321c33d8984",
+    "car2_ws/tests/test_teleop_safety.py": "dceb1d51f6f50020a1914eb02db7c3dff8f3c6b69f98293d5e7ee7a109789451",
+    "car2_ws/tests/vehicle_pair_regression.cpp": "eb58eb05f4947387523996381b55fcb178f87060981f79c99556a9c5f664bcd3",
+    "car2_ws/tests/watchdog_tick_regression.cpp": "4c6a48b4b42e0f4866e316248990e56a7078c17bb500bb9dce3af2433355cee2"
+  },
+  "newCopyAdjustments": [
+    "Pinned PlatformIO Teensy 5.1.0 and installed library versions in new platformio.ini",
+    "Host launchers use bundle-local .venv instead of a machine-specific Python location",
+    "Runtime logs and installation records write to runtime/; frozen evidence stays in evidence/",
+    "New flash entrypoints require -ActuatorPowerOff",
+    "Legacy steering RestoreOperational now selects the newer mapped operational image, matching InstallOperationalLimits",
+    "New dated upload wrapper and setup/test/hash tools added; no existing repository paths changed",
+    "Historical README and publication test logs have machine-specific paths replaced with descriptive placeholders",
+    "Pinned config includes a separate non-default brake_bench environment for the retained source"
+  ],
+  "sourceArchiveComparison": {
+    "archive": "CAR2_VEHICLE_20261016_R02 source-and-tests.zip",
+    "byteIdenticalToArchivedSource": [
+      "master.cpp",
+      "throttle.cpp",
+      "brake.cpp",
+      "dbw_can.h"
+    ],
+    "steering": "Newer STEER_LIMITS_20261019_R01 source; original archived limits not used"
+  }
+}

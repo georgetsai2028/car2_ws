@@ -1,0 +1,12 @@
+{
+  "Q01": "CAN module chip/model; actual H/L screw-terminal labels and wire polarity.",
+  "Q02": "Which termination jumpers/resistors are fitted? Confirm 60 ohms powered off.",
+  "Q03": "Buck output(s), VIN wiring, ground bonding and each VIN-VUSB link state.",
+  "Q04": "Driver/controller model labels and all motor-supply voltages/fuse ratings.",
+  "Q05": "CL57T PUL+/PUL-, DIR+/DIR-, ENA connections and any interface circuit.",
+  "Q06": "Which pin17/pin18 switch is physically reached on left and right travel?",
+  "Q07": "IBT-2 PWM/enable/VCC terminals; actuator motor pair and feedback wiring.",
+  "Q08": "MCP4725 supply; Votol throttle ground/input and GPIO33/34/35 terminals.",
+  "Q09": "Physical E-stop/disconnect/contactor chain; underglow supply and switching.",
+  "Q10": "Which steering sensor failed? Motor encoder vs A0 feedback; encoder supplies."
+}
