@@ -5,7 +5,8 @@
 //
 // Steering v2: no steps until explicitly referenced and E-stop is cleared.
 // Z on the master records the physically centered position while stopped.
-// E-stop, missing commands, and limit faults hold the current position.
+// A single end switch returns steering to Z; E-stop, missing commands, and
+// invalid limit states hold the current position.
 //
 // Why this rewrite (see DESIGN.md §3):
 //   - the CL57T is closed-loop: it ramps current to its set max when it can't reach
@@ -19,7 +20,7 @@
 // Installed switch locations: physically right=17, physically left=18.
 // Rightward steering approaches the physically LEFT switch, so the rightward
 // travel guard is GPIO18, and the opposite travel guard is GPIO17. Either
-// physical switch still stops all operational steering and clears reference.
+// physical switch overrides steering input with a return to the recorded Z.
 // encoder A0 (reported for calibration, not used as an unverified center).
 
 #include <Arduino.h>
@@ -52,10 +53,10 @@ namespace cfg {
     constexpr long     STEP_BAND   =  10;
     constexpr float    CENTER_TRIM = 0.00f;   // correction is owned by teleop
 
-    // Crawl speeds for bring-up (raise later once proven).
-    constexpr float    MAX_SPEED  = 5000.0f;  // matches the powered commissioning test
-    constexpr float    ACCEL      = 20000.0f;
-    constexpr unsigned MIN_PULSE_US = 100;    // reference test pulse width
+    // Operational steering pulse-rate ceiling.
+    constexpr float    MAX_SPEED  = 24000.0f; // 1.6x the previous 15000 pulses/s ceiling
+    constexpr float    ACCEL      = 51200.0f; // 1.6 squared times the 20000 pulses/s^2 baseline
+    constexpr unsigned MIN_PULSE_US = 25;     // leaves low time at 24000 pulses/s
     constexpr bool     DIR_INVERT     = true;   // USB jog verified positive steps turn wheels right
 
     // One-time travel calibration: set true, flash, watch serial for the measured
@@ -108,6 +109,7 @@ DbwRxState rx;
 static float    setpoint  = 0.0f;
 static bool     homed     = false;
 static bool     cmd_estop = true;
+static bool     return_to_center = false;
 
 static uint32_t last_valid_cmd_ms = 0;
 static bool     stale     = true;
@@ -144,7 +146,7 @@ static long setpointToSteps(float sp) {
     return target;
 }
 
-// Stop at either switch. Neither switch position nor the old travel constants
+// Diagnostic step-test guard: stop at either switch. Neither switch position nor the old travel constants
 // establishes a measured endpoint on this car. A trip needs a new stationary
 // center reference; it must never silently reset position to an old endpoint.
 static void runMotionGuarded() {
@@ -155,6 +157,35 @@ static void runMotionGuarded() {
     } else {
         stepper.run();
     }
+}
+
+// Operational end-switch recovery preserves the operator's existing Z.
+// At a pressed switch only motion toward Z and away from that end is allowed.
+static void runOperationalMotion(bool lr, bool ll) {
+    const long current = stepper.currentPosition();
+    if (lr || ll) {
+        const bool can_return = (lr && !ll && current > 0) ||
+                                (ll && !lr && current < 0);
+        if (!can_return) {
+            stepper.setCurrentPosition(current);
+            homed = false;
+            return_to_center = false;
+            setEnergized(false);
+            return;
+        }
+        if (!return_to_center) {
+            // Cancel any outward velocity before starting the inward return.
+            stepper.setCurrentPosition(current);
+            return_to_center = true;
+        }
+    }
+
+    // A held steering key must not send the wheels straight back to the switch.
+    if (return_to_center && current == 0 && !lr && !ll && setpoint == 0.0f) {
+        return_to_center = false;
+    }
+    stepper.moveTo(return_to_center ? 0 : setpointToSteps(setpoint));
+    stepper.run();
 }
 
 // --------------------------- Calibration ---------------------------------
@@ -270,6 +301,7 @@ static void handleCan() {
                 // off. Establish a reference without generating any step pulse.
                 stepper.setCurrentPosition(0);
                 homed = true;
+                return_to_center = false;
                 setpoint = 0.0f;
             } else if (!cmd_estop) {
                 setpoint = (p[1] & DBW_STEER_CENTER) ? 0.0f :
@@ -349,20 +381,23 @@ void loop() {
         runStepTest(now);
         allow_motion = true;
     } else {
-        allow_motion = cfg::MOTION_ENABLED && homed && !cmd_estop && !stale && !lr && !ll;
+        allow_motion = cfg::MOTION_ENABLED && homed && !cmd_estop && !stale && !fault;
         if (allow_motion) {
             setEnergized(true);
             // Respect the CL57T ENA-before-DIR settle time before stepping.
             const bool settled = !cfg::USE_ENABLE_PIN || (now - energized_ms >= cfg::ENA_SETTLE_MS);
             if (settled) {
-                stepper.moveTo(setpointToSteps(setpoint));
-                runMotionGuarded();
+                runOperationalMotion(lr, ll);
+                allow_motion = homed;
             }
         } else {
             // Diagnostic / fault / stale: hold target at current, de-energize, no stepping.
             setEnergized(false);
             stepper.setCurrentPosition(stepper.currentPosition());
-            if (stale || lr || ll) homed = false; // a limit trip or timeout needs a new reference
+            if (stale || fault) {
+                homed = false;
+                return_to_center = false;
+            }
         }
     }
 
@@ -389,6 +424,7 @@ void loop() {
         Serial.print("  enc=");     Serial.print(analogRead(cfg::PIN_ENC));
         Serial.print("  L_steps="); Serial.print(cfg::STEPS_LEFT);
         Serial.print("  R_steps="); Serial.print(cfg::STEPS_RIGHT);
-        Serial.println("  fw=STEER_LIMITS_20261019_R01 ref=MANUAL pulse_us=100");
+        Serial.print("  fw=STEER_LIMITS_Z_RETURN_R02 ref=MANUAL pulse_us=");
+        Serial.println(cfg::MIN_PULSE_US);
     }
 }

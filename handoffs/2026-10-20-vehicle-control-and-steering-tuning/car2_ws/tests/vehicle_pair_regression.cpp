@@ -46,6 +46,22 @@ int main() {
     master_fw::parseLine(active); deliverCommands();
     assert(!master_fw::g_estop && !steer_fw::cmd_estop);
     assert(steer_fw::stepper.pulses > 0 && steer_fw::setpoint > 0);
+    // An operational switch hit returns to the existing Z and must not make
+    // master latch E-stop through a lost steering reference.
+    steer_fw::stepper.setCurrentPosition(5);
+    mock_pins[18] = HIGH;
+    mock_now += 100; deliverCommands(); deliverSteeringStatus();
+    assert(steer_fw::return_to_center && steer_fw::homed);
+    assert(steer_fw::stepper.currentPosition() == 4);
+    assert(master_fw::fb_steer_homed == 1);
+    mock_pins[18] = LOW;
+    for (int i = 0; i < 6; ++i) {
+        mock_now += 100;
+        deliverCommands(); deliverSteeringStatus();
+        assert(!master_fw::g_estop && master_fw::fb_steer_homed == 1);
+    }
+    assert(steer_fw::stepper.currentPosition() == 0);
+    assert(steer_fw::return_to_center); // outward command is still held
     unsigned pulses = steer_fw::stepper.pulses;
     char stop[] = "A E=1 T=0 M=N B=1 S=-0.4";
     master_fw::parseLine(stop); deliverCommands();

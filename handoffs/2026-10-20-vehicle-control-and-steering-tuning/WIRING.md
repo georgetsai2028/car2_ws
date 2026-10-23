@@ -15,8 +15,8 @@ This is the firmware pin contract and recorded operator wiring, not a continuity
 | Throttle | MCP4725 I2C | 18 SDA / 19 SCL; address 0x62, fallback 0x60 |
 | Throttle | Gear B / C / D | 33 / 34 / 35 |
 | Throttle | Wheel-speed quadrature A / B | 2 / 3 |
-| Brake | H-bridge retract / release | 19 |
-| Brake | H-bridge extend / apply | 18 |
+| Brake | H-bridge retract / release | 18 |
+| Brake | H-bridge extend / apply | 19 |
 | Brake | Actuator position feedback | A0 = 14 |
 
 The CAN module's right screw terminals are **CAN-H and CAN-L**, the differential bus. They do not correspond individually to logic TX/RX on its left header. CAN-H joins every module's H; CAN-L joins every module's L. TXD and RXD are the separate local Teensy-to-transceiver logic connection. No software claim here establishes a specific module's terminal order: read its silkscreen.
@@ -25,7 +25,9 @@ Recorded cable order: throttle → master → steering → brake. Use one 120 Ω
 
 When external vehicle VIN and USB are both connected, provide the Teensy VIN/VUSB isolation required for the actual power arrangement. USB serial enumeration does not establish electrical power isolation.
 
-The steering switches use INPUT_PULLUP with **NC released = LOW; pressed/open circuit = HIGH**. Manual holds established physical switch identity; wheel motion established that rightward travel approaches the physically left switch. Normal firmware stops steering and clears its reference on either switch. The selected software limits leave clearance before those contacts. They are not measured switch-trip points and are not angles in degrees.
+The steering switches use INPUT_PULLUP with **NC released = LOW; pressed/open circuit = HIGH**. Manual holds established physical switch identity; wheel motion established that rightward travel approaches the physically left switch. During referenced, active operation a single switch overrides input and returns the wheels toward the existing Z, moving away from the pressed end. Steering input must return to zero before normal steering resumes. E-stop holds position; timeout, both switches, or a switch inconsistent with the recorded side stop motion and invalidate reference. The selected software limits leave clearance before those contacts. They are not measured switch-trip points and are not angles in degrees.
+
+Operational steering speed ceiling is 24000 pulses/s with 51200 pulses/s² acceleration, 10 µs direction setup, and 25 µs STEP high time. The speed ceiling is 1.6 times the previous 15000 pulses/s; acceleration is 2.56 times the previous 20000 pulses/s² to scale the ideal motion profile by 1.6 over the same travel. Z and the -8250/+10000 pulse travel boundaries are unchanged.
 
 Throttle uses MCP4725, not MCP4728: nominal idle 0.80 V, configured full-scale 3.30 V, software throttle ceiling 0.75. Gear pin levels B/C/D: N=H/H/H, D=L/H/H, S=L/H/L, R=H/L/H. The DAC output is the VOTOL EM-70 throttle input; it is not the separate rotary encoder. DAC readback verifies register state, not the measured voltage at the controller or controller enable state. A speed encoder fault and VOTOL motor Hall/commutation wiring are different problems.
 

@@ -4,8 +4,8 @@
 #include <Arduino.h>
 
 namespace cfg {
-    constexpr uint8_t PIN_RETRACT = 19;
-    constexpr uint8_t PIN_EXTEND = 18;
+    constexpr uint8_t PIN_RETRACT = 18;
+    constexpr uint8_t PIN_EXTEND = 19;
     constexpr uint8_t PIN_FEEDBACK = A0;
 
     constexpr uint8_t PULSE_PWM = 96;          // 38% duty at 8-bit resolution
@@ -37,10 +37,10 @@ static void startPulse(Motion requested, uint32_t now, uint32_t duration_ms) {
     stopMotor();
     if (requested == Motion::Apply) {
         analogWrite(cfg::PIN_EXTEND, cfg::PULSE_PWM);
-        Serial.print(F("APPLY pulse: pin 18 active, pin 19 off, ms="));
+        Serial.print(F("APPLY pulse: pin 19 active, pin 18 off, ms="));
     } else {
         analogWrite(cfg::PIN_RETRACT, cfg::PULSE_PWM);
-        Serial.print(F("RELEASE pulse: pin 19 active, pin 18 off, ms="));
+        Serial.print(F("RELEASE pulse: pin 18 active, pin 19 off, ms="));
     }
     Serial.println(duration_ms);
 
@@ -53,8 +53,8 @@ static void startPulse(Motion requested, uint32_t now, uint32_t duration_ms) {
 static void printHelp() {
     Serial.println();
     Serial.println(F("Brake bench diagnostic (not vehicle firmware)"));
-    Serial.println(F("  a = one 200 ms APPLY pulse on pin 18"));
-    Serial.println(F("  r = one 200 ms RELEASE pulse on pin 19"));
+    Serial.println(F("  a = one 200 ms APPLY pulse on pin 19"));
+    Serial.println(F("  r = one 200 ms RELEASE pulse on pin 18"));
     Serial.println(F("  A = one 1000 ms APPLY calibration pulse"));
     Serial.println(F("  R = one 1000 ms RELEASE calibration pulse"));
     Serial.println(F("  x = stop immediately"));

@@ -142,11 +142,8 @@ static void resetDirectionGuard() {
 // ---------------------------- CAN command TX -----------------------------
 static void sendCommands() {
     const uint32_t now = millis();
-    // Missing node feedback must be explicit and must not leave an active
-    // command running. Clearing E-stop requires a referenced steering node.
-    if (!g_estop && (!statusFresh(fb_thr_status_ms, now) ||
-                     !statusFresh(fb_steer_status_ms, now) ||
-                     !statusFresh(fb_brake_status_ms, now) || !fb_steer_homed)) {
+    // Clearing E-stop requires a referenced steering node.
+    if (!g_estop && !fb_steer_homed) {
         g_estop = true;
         g_throttle = 0.0f;
         g_mode = 'N';

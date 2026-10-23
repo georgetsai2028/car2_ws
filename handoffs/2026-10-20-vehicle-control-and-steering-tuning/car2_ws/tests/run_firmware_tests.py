@@ -14,6 +14,8 @@ build.mkdir(parents=True, exist_ok=True)
 env = os.environ.copy()
 env["PATH"] = str(pathlib.Path(args.compiler).resolve().parent) + os.pathsep + env.get("PATH", "")
 cases = [("master_regression", "master_regression", []),
+         ("brake_regression", "brake_regression", []),
+         ("brake_bench_regression", "brake_bench_regression", []),
          ("steering_profile_regression", "steering_profile_regression", []),
          ("steer_limit_test_regression", "steer_limit_test_regression", []),
          ("steer_sensor_test_regression", "steer_sensor_test_regression", []),

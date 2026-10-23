@@ -10,7 +10,7 @@
 //   - fail-safe (estop / stale command / rejected frame) = FULL brake applied
 //   - command frames validated by the shared E2E layer (dbw_can.h)
 //
-// Measured installed hardware: pin 19 retracts/releases, pin 18 extends/applies,
+// Installed motor polarity: pin 18 retracts/releases, pin 19 extends/applies,
 // and position feedback on A0 decreases as the actuator extends. The measured
 // endpoints are 945 released and 745 at the installed mechanical apply limit;
 // normal control stops at 755 to retain a small apply-side safety margin.
@@ -20,8 +20,8 @@
 
 // ----------------------------- Configuration -----------------------------
 namespace cfg {
-    constexpr uint8_t  PIN_RETRACT = 19; // retract actuator, release brake
-    constexpr uint8_t  PIN_EXTEND  = 18; // extend actuator, apply brake
+    constexpr uint8_t  PIN_RETRACT = 18; // retract actuator, release brake
+    constexpr uint8_t  PIN_EXTEND  = 19; // extend actuator, apply brake
     constexpr uint8_t  PIN_FBK     = A0; // potentiometer wiper
 
     constexpr int      ADC_RELEASED = 945;   // measured full retract / brake off

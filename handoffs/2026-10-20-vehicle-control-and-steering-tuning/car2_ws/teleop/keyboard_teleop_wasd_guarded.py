@@ -39,7 +39,7 @@ from pynput import keyboard
 from teensy_serial import VehicleActuator
 
 
-DEFAULT_SPEED_LEVELS = (0.21, 0.30, 0.50, 0.70)
+DEFAULT_SPEED_LEVELS = (0.15, 0.30, 0.50, 0.70)
 DEFAULT_STEER_TRIM = 0.0
 MAX_STEER_TRIM = 0.50
 DEFAULT_HIGH_SPEED_RAMP_RATE = 0.10
@@ -188,8 +188,6 @@ class WasdTeleop:
     def _inhibit_reason(self):
         if time.monotonic() - self.telem_at > 0.5:
             return "NO-MASTER"
-        if any(self.telem.get(key) != 1 for key in ("tr", "sr", "br")):
-            return "CHECK-CAN"
         if self.telem.get("sh") != 1:
             return "NEED-REF (Z)" if self.manual_reference_enabled else "Z-OFF (F2)"
         if int(self.telem.get("sf", 0)) & 0x10:

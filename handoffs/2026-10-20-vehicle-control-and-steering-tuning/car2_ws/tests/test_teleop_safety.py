@@ -37,13 +37,20 @@ class TeleopSafety(unittest.TestCase):
         for _ in range(20):
             self.assertEqual(self.app._compute(), (True, 0, "N", 1, 0))
 
-    def test_estop_cannot_clear_with_missing_can_or_reference(self):
-        for missing in ("tr", "sr", "br", "sh"):
+    def test_estop_can_clear_with_missing_node_feedback(self):
+        for missing in ("tr", "sr", "br"):
             self.ready()
             self.app.telem[missing] = 0
+            self.app.estop = True
             self.app.on_press("e")
             self.app.on_release("e")
-            self.assertTrue(self.app.estop)
+            self.assertFalse(self.app.estop)
+
+    def test_estop_cannot_clear_without_steering_reference(self):
+        self.ready()
+        self.app.telem["sh"] = 0
+        self.app.on_press("e")
+        self.assertTrue(self.app.estop)
 
     def test_clear_estop_does_not_enable_drive(self):
         self.ready()
@@ -90,14 +97,19 @@ class TeleopSafety(unittest.TestCase):
         self.assertTrue(self.app.estop)
         self.assertEqual(self.app._compute(), (True, 0, "N", 1, 0))
 
-    def test_lost_feedback_latches_estop_and_stops_all_commands(self):
+    def test_missing_brake_feedback_does_not_stop_driving(self):
         self.ready()
         self.app.estop = False
         self.app.drive_enabled = True
         self.app._pressed.update(("w", "d"))
         self.app.telem["br"] = 0
-        self.assertEqual(self.app._compute(), (True, 0, "N", 1, 0))
-        self.assertFalse(self.app.drive_enabled)
+        self.app.telem["tm"] = 1
+        estop, throttle, mode, brake, steer = self.app._compute()
+        self.assertFalse(estop)
+        self.assertGreater(throttle, 0)
+        self.assertEqual((mode, brake), ("D", 0))
+        self.assertGreater(steer, 0)
+        self.assertTrue(self.app.drive_enabled)
 
     def test_frozen_master_telemetry_cannot_keep_driving(self):
         self.ready()
@@ -110,6 +122,16 @@ class TeleopSafety(unittest.TestCase):
         self.app.telem["sf"] = 0x10
         self.app.on_press("e")
         self.assertTrue(self.app.estop)
+
+    def test_single_limit_with_preserved_reference_does_not_inhibit(self):
+        for flag in (0x01, 0x02):
+            self.ready()
+            self.app.estop = True
+            self.app.telem["sf"] = 0x60 | flag
+            self.app.on_press("e")
+            self.app.on_release("e")
+            self.assertFalse(self.app.estop)
+            self.assertFalse(self.app._compute()[0])
 
     def test_active_steering_remains_controllable(self):
         self.ready()

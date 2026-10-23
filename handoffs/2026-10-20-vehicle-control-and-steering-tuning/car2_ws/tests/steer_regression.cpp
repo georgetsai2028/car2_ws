@@ -14,7 +14,7 @@ int main() {
     assert(setpointToSteps(-1.0f) == -8250 && setpointToSteps(1.0f) == 10000);
     assert(setpointToSteps(-5.0f) == -8250 && setpointToSteps(5.0f) == 10000);
     assert(setpointToSteps(0.0f) == 0);
-    assert(stepper.minimumPulseUs == 100);
+    assert(stepper.minimumPulseUs == 25);
     for (int i = 0; i < 20; ++i) { mock_now += 10; loop(); }
     assert(stale && !homed && stepper.pulses == 0);
 
@@ -62,32 +62,66 @@ int main() {
     assert(limitR() && !limitL());
     mock_pins[18] = LOW;
 
-    // Either physical switch blocks BOTH command directions, holds position,
-    // and latches loss of reference even after that switch is released.
+    // Either end switch returns to the existing Z without losing reference.
+    // Held outward input stays overridden until the input returns to zero.
     for (int pin : {17, 18}) {
-        for (int direction : {-64, 64}) {
-            command(true, DBW_STEER_REFERENCE, 0);
-            command(false, 0, (int8_t)direction);
-            const unsigned pulses_before_limit = stepper.pulses;
-            const long position_before_limit = stepper.currentPosition();
-            mock_pins[pin] = HIGH;
-            command(false, 0, (int8_t)direction);
-            assert(!homed && !energized && stepper.pulses == pulses_before_limit);
-            assert(stepper.currentPosition() == position_before_limit);
-            command(true, DBW_STEER_REFERENCE, 0);
-            assert(!homed); // cannot establish a reference at a pressed switch
-            mock_pins[pin] = LOW;
-            command(false, 0, (int8_t)-direction);
-            assert(!homed && stepper.pulses == pulses_before_limit);
-        }
+        const int direction = pin == 18 ? 1 : -1;
+        command(true, DBW_STEER_REFERENCE, 0);
+        stepper.setCurrentPosition(direction * 5);
+        const unsigned pulses_before_limit = stepper.pulses;
+        mock_pins[pin] = HIGH;
+        command(false, 0, (int8_t)(direction * 127));
+        assert(homed && energized && return_to_center);
+        assert(stepper.pulses == pulses_before_limit + 1);
+        assert(stepper.currentPosition() == direction * 4);
+        // E-stop must interrupt the automatic return without inventing a new Z.
+        const unsigned before_estop = stepper.pulses;
+        command(true, 0, 0);
+        assert(homed && return_to_center && stepper.pulses == before_estop);
+        mock_pins[pin] = LOW;
+        for (int i = 0; i < 8; ++i) command(false, 0, (int8_t)(direction * 127));
+        assert(homed && return_to_center && stepper.currentPosition() == 0);
+        assert(stepper.pulses == pulses_before_limit + 5);
+        command(false, 0, 0); // input released; resume normal steering
+        assert(!return_to_center && homed && stepper.currentPosition() == 0);
+        command(false, 0, (int8_t)(direction * 127));
+        assert(stepper.currentPosition() == direction);
+
+        // A switch on the wrong side of the recorded Z cannot choose a safe
+        // return direction. A switch still pressed at Z also stops.
+        command(true, DBW_STEER_REFERENCE, 0);
+        stepper.setCurrentPosition(-direction * 5);
+        const unsigned before_invalid = stepper.pulses;
+        mock_pins[pin] = HIGH;
+        command(false, 0, (int8_t)(direction * 127));
+        assert(!homed && !energized && stepper.pulses == before_invalid);
+        command(true, DBW_STEER_REFERENCE, 0);
+        assert(!homed); // cannot re-reference at a pressed switch
+        mock_pins[pin] = LOW;
+        command(true, DBW_STEER_REFERENCE, 0);
+        mock_pins[pin] = HIGH;
+        command(false, 0, 0);
+        assert(!homed && !energized && stepper.currentPosition() == 0);
+        mock_pins[pin] = LOW;
     }
+    command(true, DBW_STEER_REFERENCE, 0);
+    stepper.setCurrentPosition(5);
+    mock_pins[18] = HIGH;
+    command(false, 0, 127);
+    assert(return_to_center && homed);
+    const unsigned before_return_timeout = stepper.pulses;
+    mock_now += cfg::WATCHDOG_MS + 1; loop();
+    assert(stale && !homed && !return_to_center && stepper.pulses == before_return_timeout);
+    mock_pins[18] = LOW;
+    command(false, 0, 0);
+    assert(!homed && stepper.pulses == before_return_timeout);
     command(true, DBW_STEER_REFERENCE, 0);
     const unsigned pulses_after_limit_tests = stepper.pulses;
 
     const unsigned long delay_before_pulse = mock_microsecond_delays;
     command(false, 0, 64);
     assert(stepper.pulses == pulses_after_limit_tests + 1 && stepper.currentPosition() > 0);
-    assert(mock_microsecond_delays - delay_before_pulse == 110);
+    assert(mock_microsecond_delays - delay_before_pulse == 35);
     assert(mock_pins[16] == LOW && mock_pins[15] == LOW);
     unsigned before = stepper.pulses;
     long held = stepper.currentPosition();
@@ -110,5 +144,5 @@ int main() {
     mock_pins[cfg::PIN_LIM_L] = mock_pins[cfg::PIN_LIM_R] = HIGH;
     command(false, 0, 127);
     assert(!homed && stepper.pulses == before);
-    puts("PASS steering: cold boot, legacy frames, E-stop, reference, physical GPIO17/18 labels, either-limit stop/latch, watchdog");
+    puts("PASS steering: end-switch Z return, held-input override, invalid switch stop, E-stop, reference and watchdog");
 }

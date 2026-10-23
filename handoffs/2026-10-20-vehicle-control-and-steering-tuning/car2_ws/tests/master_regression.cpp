@@ -25,14 +25,14 @@ int main() {
     parseLine(reference); sendCommands(); steerPayload(payload);
     assert(payload[1] == 0); // zeroing while active is forbidden
 
-    // Each missing node independently inhibits operation.
+    // Missing node status remains telemetry-only; it does not latch E-stop.
     uint32_t* times[] = {&fb_thr_status_ms, &fb_steer_status_ms, &fb_brake_status_ms};
     for (auto timer : times) {
         fb_thr_status_ms = fb_steer_status_ms = fb_brake_status_ms = millis();
         *timer = 0; g_estop = false; g_throttle = 0.5f; g_mode = 'D';
         sendCommands(); steerPayload(payload);
-        assert(g_estop && g_throttle == 0 && g_mode == 'N' && g_brake == 1);
-        assert(payload[0] == 1 && payload[2] == 0);
+        assert(!g_estop && g_throttle == 0.5f && g_mode == 'D');
+        assert(payload[0] == 0 && (int8_t)payload[2] == 64);
     }
     fb_thr_status_ms = fb_steer_status_ms = fb_brake_status_ms = millis();
     fb_steer_homed = 0; g_estop = false; sendCommands(); assert(g_estop);

@@ -42,6 +42,7 @@ struct MockSerial {
     char read() { char c = input.front(); input.pop_front(); return c; }
     template<class T> void print(T) {}
     template<class T> void print(T, int) {}
+    void println() { output += '\n'; }
     void println(const char* s) { output += s; output += '\n'; }
     void println(char* s) { println((const char*)s); }
     template<class T> void println(T) {}

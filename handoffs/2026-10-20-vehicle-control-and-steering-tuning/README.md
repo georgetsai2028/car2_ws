@@ -1,8 +1,19 @@
 # 2026-10-20 — Vehicle Control Handoff and Steering Tuning
 
-This dated folder contains the four-node Teensy 4.1 vehicle-control baseline used on this car, the host controller, diagnostic firmware, tests, recorded steering limits, and reproducible Windows commands. It is an additions-only snapshot: existing repository files are untouched. **Run the tools in this folder**, rather than similarly named older scripts at the repository root. Nothing is flashed or moved by cloning, setup, verification, building, or offline tests.
+This dated folder contains the four-node Teensy 4.1 vehicle-control baseline used on this car, the host controller, diagnostic firmware, tests, recorded steering limits, and reproducible Windows commands. This handoff now includes the 2026-10-22 source updates. **Run the tools in this folder**, rather than similarly named older scripts at the repository root. Nothing is flashed or moved by cloning, setup, verification, building, or offline tests.
 
-The operator reported working acceleration and steering before this handoff. Steering currently uses manually referenced step counts with selected travel limits **−8,250 left / +10,000 right**. Its analog sensor still needs validation; automatic saved-center calibration and startup centering are **not enabled**. The next job is [steering tuning](STEERING-TUNING-NEXT.md). See [validation and limits of the evidence](VALIDATION.md).
+The operator reported working acceleration and steering before this handoff. Steering currently uses manually referenced step counts with selected travel limits **−8,250 left / +10,000 right**. Its analog sensor still needs validation; automatic saved-center calibration and startup centering are **not enabled**. Remaining work is **tuning and brake**; [earlier steering tuning notes](STEERING-TUNING-NEXT.md) remain available as background. See [validation and limits of the evidence](VALIDATION.md).
+
+## Current working version — 2026-10-22
+
+The operator approved this working version. Remaining work is **tuning and brake**.
+
+- Missing node feedback no longer triggers the master/teleop all-node CAN lock; feedback remains visible. Steering reference, E-stop, command watchdogs, and direction guards remain in place.
+- Keys 1–4 select 15%, 30%, 50%, and 70% throttle command levels.
+- Steering uses a 24,000 pulses/s ceiling, 51,200 pulses/s² acceleration, and a 25 µs step pulse. A valid single end-switch hit returns steering to the recorded Z position; invalid switch states and command timeouts still clear reference.
+- Brake direction pins are corrected: extend/apply GPIO19, retract/release GPIO18. Brake tuning remains unfinished.
+
+Build/upload the current source in `car2_ws/firmware/teensys` with PlatformIO. Packaged HEX files, frozen evidence, and `source-provenance.json` preserve the earlier baseline and do not represent these source updates. Board serial/COM assignments below are historical: boards have been moved and reflashed. Confirm the physical role and current port before uploading or running control.
 
 ## Get the package onto a new Windows PC
 
@@ -33,7 +44,7 @@ The first command only lists ports. The second includes the USB serial used by t
 | Acceleration/throttle | 20543040 | COM9 | `outputs/car2-vehicle-firmware-r02/throttle.hex` |
 | Brake | 20542540 | COM10 | `outputs/car2-vehicle-firmware-r02/brake.hex` |
 
-## Install the operational baseline, one board at a time
+## Archived baseline installation, one board at a time
 
 Switch off traction, steering-driver, and brake-actuator power; keep only the selected Teensy connected by USB. Close teleop/serial monitors. The explicit flag records that actuator power is off; software cannot measure the power state. The packaged HEX files preserve the recorded baseline. Firmware builds are checked separately and do not replace these archived images.
 
@@ -52,31 +63,33 @@ The uploader checks hashes and the unique application/bootloader identity, write
 
 ## Run full-car keyboard control through master
 
-All four operational nodes and their CAN modules must be powered. See [wiring](WIRING.md), including VIN/USB power isolation. For first powered tests, keep drive wheels securely raised, steering unloaded, people clear, and a physical power cutoff available. Center the front wheels physically before referencing. USB stays on master; other boards can be powered by the vehicle.
+Power the installed operational nodes and their CAN modules. Missing feedback is displayed but does not itself lock control. See [wiring](WIRING.md), including VIN/USB power isolation. For first powered tests, keep drive wheels securely raised, steering unloaded, people clear, and a physical power cutoff available. Center the front wheels physically before referencing. USB stays on master; other boards can be powered by the vehicle.
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\outputs\car2-steering-calibration\Run-Teleop.ps1
+$masterPort = Read-Host "Enter confirmed master port (e.g. COM5)"
+if ($masterPort -match '^\d+$') { $masterPort = "COM$masterPort" }
+& .\.venv\Scripts\python.exe .\car2_ws\teleop\keyboard_teleop_wasd_guarded.py --port $masterPort
 ```
 
-It detects master serial 18637540 automatically. Optional `-Port COM3` restricts detection to that port. It starts in E-stop. **Z does not move the wheels:** only press it while physically straight/stationary to declare the current position zero.
+Use the confirmed current master port. The older `Run-Teleop.ps1` launcher assumes a historical master serial and may reject the current board assignment. Teleop starts in E-stop. **Z does not move the wheels:** only press it while physically straight/stationary to declare the current position zero.
 
 | Key | Action |
 |---|---|
 | Z, while E-stop is active | Declare physically straight current position as center |
 | F2, while E-stop is active | Toggle manual Z reference availability |
-| E | Toggle E-stop; clearing it requires fresh node feedback and steering reference |
+| E | Toggle E-stop; clearing it requires current master telemetry and a valid steering reference |
 | Q | Toggle drive enable after E-stop is cleared |
 | W / S, or up/down arrows | Forward / reverse; direction changes use neutral/brake dwell |
 | A / D, or left/right arrows | Steer left / right |
 | C | Command the referenced steering center |
-| 1 / 2 / 3 / 4 | Select throttle level (inspect displayed `lvl`) |
+| 1 / 2 / 3 / 4 | Select 15% / 30% / 50% / 70% throttle command |
 | G | Toggle sport gear selection |
 | Space | Brake |
 | Esc | Exit with software E-stop |
 
-Start with level **1**. A released key does not establish a new center. `-DisableManualReference` starts with Z disabled; F2 can toggle it in E-stop. This is manual-reference control, not automatic sensor centering. A steering reset, command timeout, or limit event can invalidate reference; physically straighten and reference again only after resolving the cause.
+Start with level **1**. A released key does not establish a new center. `-DisableManualReference` starts with Z disabled; F2 can toggle it in E-stop. This is manual-reference control, not automatic sensor centering. A valid single end-switch hit returns to Z. A steering reset, command timeout, or invalid switch state can invalidate reference; physically straighten and reference again only after resolving the cause.
 
-If the console appears “locked,” read its state: `CHECK-CAN` means at least one of `tr/sr/br` is not 1, so E is intentionally inhibited. `NEED-REF (Z)` requires physical centering then Z; `Z-OFF (F2)` requires enabling manual reference if appropriate. `NO-MASTER` means stale USB telemetry. Stop any PowerShell text selection (Esc), focus the console, and check identities/power/firmware/CAN rather than removing interlocks. A CAN-only diagnostic image is incompatible with normal full-car teleop.
+If the console appears “locked,” read its state: The `tr/sr/br` fields report node communication without the former `CHECK-CAN` lock. `NEED-REF (Z)` requires physical centering then Z; `Z-OFF (F2)` requires enabling manual reference if appropriate. `NO-MASTER` means stale USB telemetry. Stop any PowerShell text selection (Esc), focus the console, and check identities/power/firmware/CAN rather than removing interlocks. A CAN-only diagnostic image is incompatible with normal full-car teleop.
 
 ## Reproduce communication and steering tests
 
@@ -115,10 +128,10 @@ That test **moves steering to both saved soft boundaries**; throttle stays zero,
 ```powershell
 # Four operational firmware builds; no upload:
 & .\.venv\Scripts\python.exe -m platformio run -d .\car2_ws\firmware\teensys
-# Host Python tests plus twelve C++ firmware/mock executables:
+# Host Python tests plus fourteen C++ firmware/mock executables:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Test-Package.ps1 -Compiler 'C:\path\to\g++.exe' -BuildFirmware
 ```
 
 Individual build environments are in the **nested** `car2_ws/firmware/teensys/platformio.ini`. `-e steer` builds normal steering; `-e steer_sensor_test` builds the temporary analog diagnostic. Build outputs are in its `.pio/build/<env>/firmware.hex`. To install a newly changed build, with only the selected board attached and actuator power off, use PlatformIO `run -d ... -e <env> -t upload`; this does not use the archived-image identity/hash guard. Verify slot, environment, and runtime output first. The dated baseline uploader always installs archived images, never implicitly a recent `.pio` build.
 
-Frozen evidence is under `evidence/`. New logs are under ignored `runtime/`. `manifest.json` hashes every packaged file except itself; `source-provenance.json` records the source comparison. `history/local-readme-before-this-handoff.md` is historical and contains earlier, superseded states. An earlier editable SVG/PDF schematic is preserved under `history/schematic-r01`; see its historical-status note before using it. The instructions here describe this dated snapshot; the repository's unchanged root documentation describes older code.
+Frozen evidence is under `evidence/`. New logs are under ignored `runtime/`. `manifest.json` hashes every packaged file except itself; `source-provenance.json` records the source comparison. `history/local-readme-before-this-handoff.md` is historical and contains earlier, superseded states. An earlier editable SVG/PDF schematic is preserved under `history/schematic-r01`; see its historical-status note before using it. The current-version notes above supersede the original snapshot instructions; older root documentation describes earlier code.
