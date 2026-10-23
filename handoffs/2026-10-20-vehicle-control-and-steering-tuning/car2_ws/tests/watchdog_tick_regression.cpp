@@ -58,5 +58,23 @@ int main() {
         brake::loop();
         assert(brake::stale);
     }
-    puts("PASS all 3 actuator nodes: clock tick during CAN RX and millis wrap stay fresh; genuine timeouts still stop");
+    // Throttle independently clamps a full-scale CAN request to 85%, even if
+    // it comes from a source other than the capped master.
+    uint8_t throttle_seq_cap = 0;
+    throttle::rx = {};
+    for (uint8_t requested : {uint8_t(140), uint8_t(217), uint8_t(255)}) {
+        CAN_message_t message;
+        uint8_t payload[3] = {0, requested, 'D'};
+        dbw_pack_cmd(message, DBW_ID_THROTTLE_CMD, throttle_seq_cap, payload, 3);
+        throttle::can.incoming.push_back(message);
+        throttle::handleCan();
+        const float expected = requested == 140 ? 140.0f / 255.0f : 0.85f;
+        assert(fabsf(throttle::cmd_throttle - expected) < 0.00001f);
+        throttle::stale = false;
+        throttle::cur_gear = throttle::Gear::D;
+        throttle::shift_phase = throttle::ShiftPhase::Idle;
+        throttle::controlStep();
+        assert(fabsf(throttle::applied_v - (0.8f + 2.5f * expected)) < 0.00001f);
+    }
+    puts("PASS actuator watchdogs and throttle 85% CAN/DAC ceiling");
 }

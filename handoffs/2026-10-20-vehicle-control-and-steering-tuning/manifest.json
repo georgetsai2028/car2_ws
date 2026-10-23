@@ -104,7 +104,7 @@
     {
       "path": "car2_ws/firmware/teensys/master.cpp",
       "bytes": 17420,
-      "sha256": "49b76b106f8b17ea826e7ff1e822a584f618d23badc36b4797f00e963f1c1464"
+      "sha256": "d2b1b02c50c118b18092db7114b144293f96f4f0c1b7e428852675c5b2718fe6"
     },
     {
       "path": "car2_ws/firmware/teensys/platformio.ini",
@@ -139,7 +139,7 @@
     {
       "path": "car2_ws/firmware/teensys/throttle.cpp",
       "bytes": 10064,
-      "sha256": "1aa2775d504ec347281337499e2f7ffcb556fdfc4c4982ed9c019576d52a35ff"
+      "sha256": "565a5c074531eaaa45e5cc545d02b362036928ff424929d3743d1a5949bc817e"
     },
     {
       "path": "car2_ws/firmware/teensys/throttle_usb_test.cpp",
@@ -153,8 +153,8 @@
     },
     {
       "path": "car2_ws/teleop/keyboard_teleop_wasd_guarded.py",
-      "bytes": 20245,
-      "sha256": "464bc5a84c040389ad4bebbc23033e6fc48ccbad2268baa2b6e66f4bd0e14506"
+      "bytes": 21824,
+      "sha256": "c6a0840a44bd815d8a2875ea30114e00d46aaaa8e422f945254cc84d9355043c"
     },
     {
       "path": "car2_ws/teleop/teensy_serial.py",
@@ -213,8 +213,8 @@
     },
     {
       "path": "car2_ws/tests/master_regression.cpp",
-      "bytes": 2099,
-      "sha256": "3b2db5ba33e0d583f5a05f0853683267befac976d9c0fe26e36e8f1c5cf91625"
+      "bytes": 4505,
+      "sha256": "baac4781e7445f880c1466ae27b4a61cfd7a1e69754cb286bc20b968973ce7b6"
     },
     {
       "path": "car2_ws/tests/run_firmware_tests.py",
@@ -243,8 +243,8 @@
     },
     {
       "path": "car2_ws/tests/test_teleop_safety.py",
-      "bytes": 6798,
-      "sha256": "28b3762c5b7dbad1619520ec2c808dac74bd1225bdb56d75490dde94cc5fa3d7"
+      "bytes": 19998,
+      "sha256": "56d67074b7977e7cd9f691665d9064db15cf724a13d94f6cea36b31a598adf0d"
     },
     {
       "path": "car2_ws/tests/vehicle_pair_regression.cpp",
@@ -253,8 +253,8 @@
     },
     {
       "path": "car2_ws/tests/watchdog_tick_regression.cpp",
-      "bytes": 2494,
-      "sha256": "4c6a48b4b42e0f4866e316248990e56a7078c17bb500bb9dce3af2433355cee2"
+      "bytes": 3364,
+      "sha256": "d66070b42cee178104d7f488117002c83cb6e27e0e68358a3eab10d155e35f27"
     },
     {
       "path": "config.json",
@@ -573,8 +573,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12352,
-      "sha256": "ad7024931ff6d97ee1c38c84481c8706a70ed7b9a9002230a9f01b03bca2c9ba"
+      "bytes": 14157,
+      "sha256": "4bb3ccef1e86f58a3b9538f035d63e24e9190b52cb21377992ff7ddac61a8a6b"
     },
     {
       "path": "requirements.txt",
@@ -619,7 +619,7 @@
     {
       "path": "WIRING.md",
       "bytes": 5568,
-      "sha256": "67e56ab70e01f40d90e9afcd2ac9b213a951748d05d8e8766a42c403d695584a"
+      "sha256": "cec86460889f86ad0655de30726b77df39a2e654e472a332022cf8c07dee516b"
     },
     {
       "path": "work/read_steering_status.py",
@@ -644,7 +644,7 @@
   ],
   "hardwareActionsDuringPublication": false,
   "automaticCenteringEnabled": false,
-  "sourceUpdatedPacific": "2026-10-22",
+  "sourceUpdatedPacific": "2026-10-23",
   "remainingWork": [
     "tuning",
     "brake"

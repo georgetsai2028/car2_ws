@@ -25,10 +25,10 @@ namespace cfg {
     constexpr uint32_t TELEM_PERIOD_MS    = 100;   // 10 Hz telemetry
     constexpr uint32_t WATCHDOG_MS        = 500;   // PC comms timeout -> estop
     constexpr float    BRAKE_INTERLOCK    = 0.05f; // brake above this zeroes throttle
-    constexpr float    THROTTLE_CEILING   = 0.75f; // vehicle-wide maximum command
+    constexpr float    THROTTLE_CEILING   = 0.85f; // vehicle-wide maximum command
     constexpr float    RELEASE_THRESHOLD  = 0.01f; // released accelerator command
     constexpr float    FULL_BRAKE_LEVEL   = 0.95f;
-    constexpr uint32_t DIRECTION_GUARD_MS = 1000;  // Neutral + brake dwell
+    constexpr uint32_t DIRECTION_GUARD_MS = 500;   // Neutral + brake dwell
     constexpr uint32_t THROTTLE_STATUS_TIMEOUT_MS = 300;
 }
 

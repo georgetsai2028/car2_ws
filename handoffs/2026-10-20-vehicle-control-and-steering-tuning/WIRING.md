@@ -29,7 +29,7 @@ The steering switches use INPUT_PULLUP with **NC released = LOW; pressed/open ci
 
 Operational steering speed ceiling is 24000 pulses/s with 51200 pulses/s² acceleration, 10 µs direction setup, and 25 µs STEP high time. The speed ceiling is 1.6 times the previous 15000 pulses/s; acceleration is 2.56 times the previous 20000 pulses/s² to scale the ideal motion profile by 1.6 over the same travel. Z and the -8250/+10000 pulse travel boundaries are unchanged.
 
-Throttle uses MCP4725, not MCP4728: nominal idle 0.80 V, configured full-scale 3.30 V, software throttle ceiling 0.75. Gear pin levels B/C/D: N=H/H/H, D=L/H/H, S=L/H/L, R=H/L/H. The DAC output is the VOTOL EM-70 throttle input; it is not the separate rotary encoder. DAC readback verifies register state, not the measured voltage at the controller or controller enable state. A speed encoder fault and VOTOL motor Hall/commutation wiring are different problems.
+Throttle uses MCP4725, not MCP4728: nominal idle 0.80 V, configured full-scale 3.30 V, software throttle ceiling 0.85. Gear pin levels B/C/D: N=H/H/H, D=L/H/H, S=L/H/L, R=H/L/H. The DAC output is the VOTOL EM-70 throttle input; it is not the separate rotary encoder. DAC readback verifies register state, not the measured voltage at the controller or controller enable state. A speed encoder fault and VOTOL motor Hall/commutation wiring are different problems.
 
 Brake constants are ADC945 released, ADC755 commanded applied, ADC745 recorded mechanical maximum, 10-count margin. These are car-specific calibration values, not a guarantee of stopping force.
 
